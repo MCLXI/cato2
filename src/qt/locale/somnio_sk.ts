@@ -62,12 +62,12 @@
         <translation>Prijímacia adresa</translation>
     </message>
     <message>
-        <source>These are your Somnio addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Toto sú vaše Somnio adresy na odosielanie platieb. Pred odoslaním vždy skontrolujte výšku a adresu prijemcu.</translation>
+        <source>These are your Catocoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Toto sú vaše Catocoin adresy na odosielanie platieb. Pred odoslaním vždy skontrolujte výšku a adresu prijemcu.</translation>
     </message>
     <message>
-        <source>These are your Somnio addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Toto sú vaše Somnio adresy na prijímanie platieb. Pre každú transakciu sa odporúča použiť novú prijímaciu adresu.</translation>
+        <source>These are your Catocoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Toto sú vaše Catocoin adresy na prijímanie platieb. Pre každú transakciu sa odporúča použiť novú prijímaciu adresu.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,16 +176,16 @@
         <translation>Potvrďte šifrovanie peňaženky</translation>
     </message>
     <message>
-        <source>Somnio will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your SOMNIOs from being stolen by malware infecting your computer.</source>
-        <translation>Somnio sa teraz ukončí, aby dokončil proces šifrovania. Nezabudnite, že šifrovanie peňaženky nemôže úplne ochrániť vaše SOMNIO pred odcudzením škodlivým softvérom, ktorý infikuje váš počítač.</translation>
+        <source>Catocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your CATOCOINs from being stolen by malware infecting your computer.</source>
+        <translation>Catocoin sa teraz ukončí, aby dokončil proces šifrovania. Nezabudnite, že šifrovanie peňaženky nemôže úplne ochrániť vaše CATOCOIN pred odcudzením škodlivým softvérom, ktorý infikuje váš počítač.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Naozaj chcete zašifrovať svoju peňaženku?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SOMNIO&lt;/b&gt;!</source>
-        <translation>Upozornenie: Ak zašifrujete svoju peňaženku a stratíte svoju prístupovú frázu, &lt;b&gt; PRÍDETE O VŠETKY SOMNIO &lt;/ b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CATOCOIN&lt;/b&gt;!</source>
+        <translation>Upozornenie: Ak zašifrujete svoju peňaženku a stratíte svoju prístupovú frázu, &lt;b&gt; PRÍDETE O VŠETKY CATOCOIN &lt;/ b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -239,16 +239,16 @@
         <translation>BIP 38 Šifrovanie</translation>
     </message>
     <message>
-        <source>Enter a Somnio Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Zadajte adresu Somnio, ktorú chcete zašifrovať pomocou BIP 38. Zadajte prístupovú frázu do stredného poľa. Stlačte šifrovanie na výpočet šifrovaného privátneho kľúča.</translation>
+        <source>Enter a Catocoin Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Zadajte adresu Catocoin, ktorú chcete zašifrovať pomocou BIP 38. Zadajte prístupovú frázu do stredného poľa. Stlačte šifrovanie na výpočet šifrovaného privátneho kľúča.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Adresa:</translation>
     </message>
     <message>
-        <source>The Somnio address to sign the message with</source>
-        <translation>Adresa Somnio, ktorou chcete správu podpísať</translation>
+        <source>The Catocoin address to sign the message with</source>
+        <translation>Adresa Catocoin, ktorou chcete správu podpísať</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -279,8 +279,8 @@
         <translation>Skopírujte aktuálny podpis do schránky</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Somnio address</source>
-        <translation>Podpíšte správu, aby ste preukázali, že ste vlastníkom tejto Somnio adresy</translation>
+        <source>Sign the message to prove you own this Catocoin address</source>
+        <translation>Podpíšte správu, aby ste preukázali, že ste vlastníkom tejto Catocoin adresy</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -303,12 +303,12 @@
         <translation>Zadajte súkromný kľúč zašifrovaný BIP 38. Zadajte prístupovú frázu do stredného poľa. Kliknite na Dešifrovať kľúč, ak chcete vypočítať privátny kľúč. Po dešifrovaní kľúča pridáte do peňaženky tento súkromný kľúč kliknutím na položku 'Importovať adresu'.</translation>
     </message>
     <message>
-        <source>The Somnio address the message was signed with</source>
-        <translation>Somnio adresa, ktorou bola správa podpísaná</translation>
+        <source>The Catocoin address the message was signed with</source>
+        <translation>Catocoin adresa, ktorou bola správa podpísaná</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Somnio address</source>
-        <translation>Skontrolujte správu, aby ste sa uistili, že bola podpísaná zadanou Somnio adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified Catocoin address</source>
+        <translation>Skontrolujte správu, aby ste sa uistili, že bola podpísaná zadanou Catocoin adresou</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -598,16 +598,16 @@
         <translation>Panel nástrojov Záložky</translation>
     </message>
     <message>
-        <source>Somnio Core</source>
-        <translation>Somnio Core</translation>
+        <source>Catocoin Core</source>
+        <translation>Catocoin Core</translation>
     </message>
     <message>
-        <source>Send coins to a Somnio address</source>
-        <translation>Odoslať mince na adresu Somnio</translation>
+        <source>Send coins to a Catocoin address</source>
+        <translation>Odoslať mince na adresu Catocoin</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and somnio: URIs)</source>
-        <translation>Vyžiadať platby (generuje QR kódy a somnio: identifikátory URI)</translation>
+        <source>Request payments (generates QR codes and catocoin: URIs)</source>
+        <translation>Vyžiadať platby (generuje QR kódy a catocoin: identifikátory URI)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -618,24 +618,24 @@
         <translation>Prezrieť masternody</translation>
     </message>
     <message>
-        <source>&amp;About Somnio Core</source>
-        <translation>O Somnio Core</translation>
+        <source>&amp;About Catocoin Core</source>
+        <translation>O Catocoin Core</translation>
     </message>
     <message>
-        <source>Show information about Somnio Core</source>
-        <translation>Zobraziť informácie o Somnio Core</translation>
+        <source>Show information about Catocoin Core</source>
+        <translation>Zobraziť informácie o Catocoin Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for Somnio</source>
-        <translation>Zmeňte možnosti konfigurácie pre Somnio</translation>
+        <source>Modify configuration options for Catocoin</source>
+        <translation>Zmeňte možnosti konfigurácie pre Catocoin</translation>
     </message>
     <message>
-        <source>Sign messages with your Somnio addresses to prove you own them</source>
-        <translation>Podpíšte správy pomocou adresy Somnio, aby ste preukázali, že ich vlastníte</translation>
+        <source>Sign messages with your Catocoin addresses to prove you own them</source>
+        <translation>Podpíšte správy pomocou adresy Catocoin, aby ste preukázali, že ich vlastníte</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Somnio addresses</source>
-        <translation>Overte správy, aby sa zabezpečilo, že boli podpísané zadanými Somnio adresami</translation>
+        <source>Verify messages to ensure they were signed with specified Catocoin addresses</source>
+        <translation>Overte správy, aby sa zabezpečilo, že boli podpísané zadanými Catocoin adresami</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -666,8 +666,8 @@
         <translation>Otvoriť konfiguračný súbor masternodu</translation>
     </message>
     <message>
-        <source>Open a Somnio: URI or payment request</source>
-        <translation>Otvorte Somnio: URI alebo žiadosť o platbu</translation>
+        <source>Open a Catocoin: URI or payment request</source>
+        <translation>Otvorte Catocoin: URI alebo žiadosť o platbu</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -678,12 +678,12 @@
         <translation>Okno blockchain prehliadača</translation>
     </message>
     <message>
-        <source>Show the Somnio Core help message to get a list with possible Somnio command-line options</source>
-        <translation>Zobraziť pomocnú správu programu Somnio Core a získajte zoznam možností príkazového riadka Somnio</translation>
+        <source>Show the Catocoin Core help message to get a list with possible Catocoin command-line options</source>
+        <translation>Zobraziť pomocnú správu programu Catocoin Core a získajte zoznam možností príkazového riadka Catocoin</translation>
     </message>
     <message>
-        <source>Somnio Core client</source>
-        <translation>Somnio Core klient</translation>
+        <source>Catocoin Core client</source>
+        <translation>Catocoin Core klient</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -813,8 +813,8 @@ MultiSend: %1</translation>
         <translation>TextLabel</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (somnio2.conf).</source>
-        <translation>Nie všetky transakcie sa zobrazia. Ak chcete zobraziť všetky transakcie, musíte v konfiguračnom súbore (somnio2.conf) nastaviť txindex = 1.</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (catocoin2.conf).</source>
+        <translation>Nie všetky transakcie sa zobrazia. Ak chcete zobraziť všetky transakcie, musíte v konfiguračnom súbore (catocoin2.conf) nastaviť txindex = 1.</translation>
     </message>
 </context>
 <context>
@@ -904,15 +904,15 @@ MultiSend: %1</translation>
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Somnio Core</source>
-        <translation>Somnio Core</translation>
+        <source>Catocoin Core</source>
+        <translation>Catocoin Core</translation>
     </message>
     </context>
 <context>
     <name>Intro</name>
     <message>
-        <source>Somnio Core</source>
-        <translation>Somnio Core</translation>
+        <source>Catocoin Core</source>
+        <translation>Catocoin Core</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1136,8 +1136,8 @@ MultiSend: %1</translation>
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The Somnio address to sign the message with</source>
-        <translation>Adresa Somnio, ktorou chcete správu podpísať</translation>
+        <source>The Catocoin address to sign the message with</source>
+        <translation>Adresa Catocoin, ktorou chcete správu podpísať</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1160,16 +1160,16 @@ MultiSend: %1</translation>
         <translation>Skopírujte aktuálny podpis do schránky</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Somnio address</source>
-        <translation>Podpíšte správu, aby ste preukázali, že ste vlastníkom tejto Somnio adresy</translation>
+        <source>Sign the message to prove you own this Catocoin address</source>
+        <translation>Podpíšte správu, aby ste preukázali, že ste vlastníkom tejto Catocoin adresy</translation>
     </message>
     <message>
-        <source>The Somnio address the message was signed with</source>
-        <translation>Somnio adresa, ktorou bola správa podpísaná</translation>
+        <source>The Catocoin address the message was signed with</source>
+        <translation>Catocoin adresa, ktorou bola správa podpísaná</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Somnio address</source>
-        <translation>Skontrolujte správu, aby ste sa uistili, že bola podpísaná zadanou Somnio adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified Catocoin address</source>
+        <translation>Skontrolujte správu, aby ste sa uistili, že bola podpísaná zadanou Catocoin adresou</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -1207,8 +1207,8 @@ MultiSend: %1</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Somnio Core</source>
-        <translation>Somnio Core</translation>
+        <source>Catocoin Core</source>
+        <translation>Catocoin Core</translation>
     </message>
     </context>
 <context>
@@ -1306,7 +1306,7 @@ MultiSend: %1</translation>
     <name>ZPhrControlDialog</name>
     </context>
 <context>
-    <name>somnio-core</name>
+    <name>catocoin-core</name>
     <message>
         <source>Error</source>
         <translation>Chyba</translation>

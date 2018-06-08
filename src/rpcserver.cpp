@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2018 The Somnio developers
+// Copyright (c) 2018 The Catocoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -238,10 +238,10 @@ Value stop(const Array& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "\nStop Somnio server.");
+            "\nStop Catocoin server.");
     // Shutdown will take long enough that the response should get back
     StartShutdown();
-    return "Somnio server stopping";
+    return "Catocoin server stopping";
 }
 
 
@@ -319,36 +319,36 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "reconsiderblock", &reconsiderblock, true, true, false},
         {"hidden", "setmocktime", &setmocktime, true, false, false},
 
-        /* Somnio features */
-        {"somnio", "masternode", &masternode, true, true, false},
-        {"somnio", "listmasternodes", &listmasternodes, true, true, false},
-        {"somnio", "getmasternodecount", &getmasternodecount, true, true, false},
-        {"somnio", "masternodeconnect", &masternodeconnect, true, true, false},
-        {"somnio", "masternodecurrent", &masternodecurrent, true, true, false},
-        {"somnio", "masternodedebug", &masternodedebug, true, true, false},
-        {"somnio", "startmasternode", &startmasternode, true, true, false},
-        {"somnio", "createmasternodekey", &createmasternodekey, true, true, false},
-        {"somnio", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
-        {"somnio", "listmasternodeconf", &listmasternodeconf, true, true, false},
-        {"somnio", "getmasternodestatus", &getmasternodestatus, true, true, false},
-        {"somnio", "getmasternodewinners", &getmasternodewinners, true, true, false},
-        {"somnio", "getmasternodescores", &getmasternodescores, true, true, false},
-        {"somnio", "mnbudget", &mnbudget, true, true, false},
-        {"somnio", "preparebudget", &preparebudget, true, true, false},
-        {"somnio", "submitbudget", &submitbudget, true, true, false},
-        {"somnio", "mnbudgetvote", &mnbudgetvote, true, true, false},
-        {"somnio", "getbudgetvotes", &getbudgetvotes, true, true, false},
-        {"somnio", "getnextsuperblock", &getnextsuperblock, true, true, false},
-        {"somnio", "getbudgetprojection", &getbudgetprojection, true, true, false},
-        {"somnio", "getbudgetinfo", &getbudgetinfo, true, true, false},
-        {"somnio", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
-        {"somnio", "mnfinalbudget", &mnfinalbudget, true, true, false},
-        {"somnio", "checkbudgets", &checkbudgets, true, true, false},
-        {"somnio", "mnsync", &mnsync, true, true, false},
-        {"somnio", "spork", &spork, true, true, false},
-        {"somnio", "getpoolinfo", &getpoolinfo, true, true, false},
+        /* Catocoin features */
+        {"catocoin", "masternode", &masternode, true, true, false},
+        {"catocoin", "listmasternodes", &listmasternodes, true, true, false},
+        {"catocoin", "getmasternodecount", &getmasternodecount, true, true, false},
+        {"catocoin", "masternodeconnect", &masternodeconnect, true, true, false},
+        {"catocoin", "masternodecurrent", &masternodecurrent, true, true, false},
+        {"catocoin", "masternodedebug", &masternodedebug, true, true, false},
+        {"catocoin", "startmasternode", &startmasternode, true, true, false},
+        {"catocoin", "createmasternodekey", &createmasternodekey, true, true, false},
+        {"catocoin", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
+        {"catocoin", "listmasternodeconf", &listmasternodeconf, true, true, false},
+        {"catocoin", "getmasternodestatus", &getmasternodestatus, true, true, false},
+        {"catocoin", "getmasternodewinners", &getmasternodewinners, true, true, false},
+        {"catocoin", "getmasternodescores", &getmasternodescores, true, true, false},
+        {"catocoin", "mnbudget", &mnbudget, true, true, false},
+        {"catocoin", "preparebudget", &preparebudget, true, true, false},
+        {"catocoin", "submitbudget", &submitbudget, true, true, false},
+        {"catocoin", "mnbudgetvote", &mnbudgetvote, true, true, false},
+        {"catocoin", "getbudgetvotes", &getbudgetvotes, true, true, false},
+        {"catocoin", "getnextsuperblock", &getnextsuperblock, true, true, false},
+        {"catocoin", "getbudgetprojection", &getbudgetprojection, true, true, false},
+        {"catocoin", "getbudgetinfo", &getbudgetinfo, true, true, false},
+        {"catocoin", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
+        {"catocoin", "mnfinalbudget", &mnfinalbudget, true, true, false},
+        {"catocoin", "checkbudgets", &checkbudgets, true, true, false},
+        {"catocoin", "mnsync", &mnsync, true, true, false},
+        {"catocoin", "spork", &spork, true, true, false},
+        {"catocoin", "getpoolinfo", &getpoolinfo, true, true, false},
 #ifdef ENABLE_WALLET
-        {"somnio", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
+        {"catocoin", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
 
         /* Wallet */
         {"wallet", "addmultisigaddress", &addmultisigaddress, true, false, true},
@@ -627,16 +627,16 @@ void StartRPCThreads()
         unsigned char rand_pwd[32];
         GetRandBytes(rand_pwd, 32);
         uiInterface.ThreadSafeMessageBox(strprintf(
-                                             _("To use somniod, or the -server option to somnio-qt, you must set an rpcpassword in the configuration file:\n"
+                                             _("To use catocoind, or the -server option to catocoin-qt, you must set an rpcpassword in the configuration file:\n"
                                                "%s\n"
                                                "It is recommended you use the following random password:\n"
-                                               "rpcuser=somniorpc\n"
+                                               "rpcuser=catocoinrpc\n"
                                                "rpcpassword=%s\n"
                                                "(you do not need to remember this password)\n"
                                                "The username and password MUST NOT be the same.\n"
                                                "If the file does not exist, create it with owner-readable-only file permissions.\n"
                                                "It is also recommended to set alertnotify so you are notified of problems;\n"
-                                               "for example: alertnotify=echo %%s | mail -s \"Somnio Alert\" admin@foo.com\n"),
+                                               "for example: alertnotify=echo %%s | mail -s \"Catocoin Alert\" admin@foo.com\n"),
                                              GetConfigFile().string(),
                                              EncodeBase58(&rand_pwd[0], &rand_pwd[0] + 32)),
             "", CClientUIInterface::MSG_ERROR | CClientUIInterface::SECURE);
@@ -1087,7 +1087,7 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(string methodname, string args)
 {
-    return "> somnio-cli " + methodname + " " + args + "\n";
+    return "> catocoin-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(string methodname, string args)

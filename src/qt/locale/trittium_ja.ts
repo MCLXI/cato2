@@ -266,6 +266,6 @@
     <name>ZPhrControlDialog</name>
     </context>
 <context>
-    <name>somnio-core</name>
+    <name>catocoin-core</name>
     </context>
 </TS>

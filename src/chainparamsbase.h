@@ -9,8 +9,8 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between somnio-cli and somniod)
- * of a given instance of the Somnio system.
+ * CBaseChainParams defines the base parameters (shared between catocoin-cli and catocoind)
+ * of a given instance of the Catocoin system.
  */
 class CBaseChainParams
 {

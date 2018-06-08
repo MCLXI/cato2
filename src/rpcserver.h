@@ -96,7 +96,7 @@ public:
 };
 
 /**
- * Somnio RPC command dispatcher.
+ * Catocoin RPC command dispatcher.
  */
 class CRPCTable
 {

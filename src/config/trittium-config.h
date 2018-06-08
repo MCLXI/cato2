@@ -1,9 +1,9 @@
-/* src/config/somnio-config.h.  Generated from somnio-config.h.in by configure.  */
-/* src/config/somnio-config.h.in.  Generated from configure.ac by autoheader.  */
+/* src/config/catocoin-config.h.  Generated from catocoin-config.h.in by configure.  */
+/* src/config/catocoin-config.h.in.  Generated from configure.ac by autoheader.  */
 
-#ifndef SOMNIO_CONFIG_H
+#ifndef CATOCOIN_CONFIG_H
 
-#define SOMNIO_CONFIG_H
+#define CATOCOIN_CONFIG_H
 
 /* Define if building universal (internal helper macro) */
 /* #undef AC_APPLE_UNIVERSAL_BUILD */
@@ -268,16 +268,16 @@
 #define LT_OBJDIR ".libs/"
 
 /* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT "www.somnio.io"
+#define PACKAGE_BUGREPORT "www.catocoin.io"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "Somnio Core"
+#define PACKAGE_NAME "Catocoin Core"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "Somnio Core 2.0.1"
+#define PACKAGE_STRING "Catocoin Core 2.0.1"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "somnio"
+#define PACKAGE_TARNAME "catocoin"
 
 /* Define to the home page for this package. */
 #define PACKAGE_URL ""
@@ -340,4 +340,4 @@
 /* Define for large files, on AIX-style hosts. */
 /* #undef _LARGE_FILES */
 
-#endif //SOMNIO_CONFIG_H
+#endif //CATOCOIN_CONFIG_H

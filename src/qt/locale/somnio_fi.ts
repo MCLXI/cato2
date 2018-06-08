@@ -62,12 +62,12 @@
         <translation>Vastaanottavat osoitteet</translation>
     </message>
     <message>
-        <source>These are your Somnio addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Nämä ovat sinun Somnio osoitteesi maksujen lähetystä varten. Tarkista aina määrä ja vastaanottava osoite ennen kolikoiden lähettämistä.</translation>
+        <source>These are your Catocoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Nämä ovat sinun Catocoin osoitteesi maksujen lähetystä varten. Tarkista aina määrä ja vastaanottava osoite ennen kolikoiden lähettämistä.</translation>
     </message>
     <message>
-        <source>These are your Somnio addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Nämä ovat sinun Somnio osoitteesi maksujen vastaanottamista varten. On suositeltavaa käyttää uutta vastaanottavaa osoitetta jokaiselle uudelle rahansiirrolle.</translation>
+        <source>These are your Catocoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Nämä ovat sinun Catocoin osoitteesi maksujen vastaanottamista varten. On suositeltavaa käyttää uutta vastaanottavaa osoitetta jokaiselle uudelle rahansiirrolle.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -172,16 +172,16 @@
         <translation>Vahvista lompakon salaus</translation>
     </message>
     <message>
-        <source>Somnio will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your SOMNIOs from being stolen by malware infecting your computer.</source>
-        <translation>Somnio sulkeutuu salausprosessin ajaksi. Muista, että lompakon salaus ei voi täysin suojella SOMNIOien varkaudelta, jos tietokoneesi sisältää haittaohjelmia.</translation>
+        <source>Catocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your CATOCOINs from being stolen by malware infecting your computer.</source>
+        <translation>Catocoin sulkeutuu salausprosessin ajaksi. Muista, että lompakon salaus ei voi täysin suojella CATOCOINien varkaudelta, jos tietokoneesi sisältää haittaohjelmia.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Oletko varma että tahdot salata lompakkosi?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SOMNIO&lt;/b&gt;!</source>
-        <translation>Varoitus: Jos salaat lompakkosi ja unohdat salausavaimesi, &lt;b&gt;menetät kaikki SOMNIOisi&lt;/b&gt;</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CATOCOIN&lt;/b&gt;!</source>
+        <translation>Varoitus: Jos salaat lompakkosi ja unohdat salausavaimesi, &lt;b&gt;menetät kaikki CATOCOINisi&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -235,8 +235,8 @@
         <translation>&amp;BIP 38 Salaus</translation>
     </message>
     <message>
-        <source>Enter a Somnio Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Syötä Somnio osoite, jonnka tahtoisit salata käyttäen BIP 38.
+        <source>Enter a Catocoin Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Syötä Catocoin osoite, jonnka tahtoisit salata käyttäen BIP 38.
 Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityisavaimen.</translation>
     </message>
     <message>
@@ -244,8 +244,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Osoite:</translation>
     </message>
     <message>
-        <source>The Somnio address to sign the message with</source>
-        <translation>Somnio osoite, jolla viesti allekirjoitetaan</translation>
+        <source>The Catocoin address to sign the message with</source>
+        <translation>Catocoin osoite, jolla viesti allekirjoitetaan</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -276,8 +276,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Kopioi nykyinen allekirjoitus järjestelmän leikepöydälle</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Somnio address</source>
-        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Somnio osoitteen</translation>
+        <source>Sign the message to prove you own this Catocoin address</source>
+        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Catocoin osoitteen</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -300,12 +300,12 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Syötä BIP 38 salattu yksityisavain. Syötä salausavain laatikkoon. Paina Avaa Salaus tuottaaksesi yksityisavaimen. Kun avain on dekryptattu, painamalla "Import osoite" lisää tämän yksityisavaimen lompakkoon.</translation>
     </message>
     <message>
-        <source>The Somnio address the message was signed with</source>
-        <translation>Somnio osoite, jolla viesti allekirjoitettiin</translation>
+        <source>The Catocoin address the message was signed with</source>
+        <translation>Catocoin osoite, jolla viesti allekirjoitettiin</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Somnio address</source>
-        <translation>Vahvista että viesti on allekirjoitettu kyseessä olevalla Somnio osoitteella.</translation>
+        <source>Verify the message to ensure it was signed with the specified Catocoin address</source>
+        <translation>Vahvista että viesti on allekirjoitettu kyseessä olevalla Catocoin osoitteella.</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -591,16 +591,16 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>&amp;Apua</translation>
     </message>
     <message>
-        <source>Somnio Core</source>
-        <translation>Somnio Ydin</translation>
+        <source>Catocoin Core</source>
+        <translation>Catocoin Ydin</translation>
     </message>
     <message>
-        <source>Send coins to a Somnio address</source>
-        <translation>Lähetä kolikkoja Somnio osoitteeseen</translation>
+        <source>Send coins to a Catocoin address</source>
+        <translation>Lähetä kolikkoja Catocoin osoitteeseen</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and somnio: URIs)</source>
-        <translation>Pyydä maksuja (Generoi QR koodeja ja somnio: URIja)</translation>
+        <source>Request payments (generates QR codes and catocoin: URIs)</source>
+        <translation>Pyydä maksuja (Generoi QR koodeja ja catocoin: URIja)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -611,24 +611,24 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Selaa masternodeja</translation>
     </message>
     <message>
-        <source>&amp;About Somnio Core</source>
-        <translation>Somnio Core &amp;ytimestä</translation>
+        <source>&amp;About Catocoin Core</source>
+        <translation>Catocoin Core &amp;ytimestä</translation>
     </message>
     <message>
-        <source>Show information about Somnio Core</source>
-        <translation>Näytä tietoja Somnio Ytimestä</translation>
+        <source>Show information about Catocoin Core</source>
+        <translation>Näytä tietoja Catocoin Ytimestä</translation>
     </message>
     <message>
-        <source>Modify configuration options for Somnio</source>
-        <translation>Muokkaa konfiguraatio vaihtoehtoja Somnio:lle</translation>
+        <source>Modify configuration options for Catocoin</source>
+        <translation>Muokkaa konfiguraatio vaihtoehtoja Catocoin:lle</translation>
     </message>
     <message>
-        <source>Sign messages with your Somnio addresses to prove you own them</source>
+        <source>Sign messages with your Catocoin addresses to prove you own them</source>
         <translation>Allekirjoita viestejä todistaaksesi, että omistat ne.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Somnio addresses</source>
-        <translation>Vahvista viestit varmistaaksesi, että ne allekirjoitettiin tietyllä Somnio osoiteella.</translation>
+        <source>Verify messages to ensure they were signed with specified Catocoin addresses</source>
+        <translation>Vahvista viestit varmistaaksesi, että ne allekirjoitettiin tietyllä Catocoin osoiteella.</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -659,8 +659,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Avaa Masternode konfiguraatiotiedosto</translation>
     </message>
     <message>
-        <source>Open a Somnio: URI or payment request</source>
-        <translation>Avaa Somnio: URI tai pyydä maksua</translation>
+        <source>Open a Catocoin: URI or payment request</source>
+        <translation>Avaa Catocoin: URI tai pyydä maksua</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -671,12 +671,12 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Lohkon tutkija näkymä</translation>
     </message>
     <message>
-        <source>Show the Somnio Core help message to get a list with possible Somnio command-line options</source>
-        <translation>Näytä Somnio Ydin apuviesti saadaksesi lista mahdollisista Somnio komentolinja komennoista.</translation>
+        <source>Show the Catocoin Core help message to get a list with possible Catocoin command-line options</source>
+        <translation>Näytä Catocoin Ydin apuviesti saadaksesi lista mahdollisista Catocoin komentolinja komennoista.</translation>
     </message>
     <message>
-        <source>Somnio Core client</source>
-        <translation>Somnio Ydin asiakasohjelma</translation>
+        <source>Catocoin Core client</source>
+        <translation>Catocoin Ydin asiakasohjelma</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -934,8 +934,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Somnio Core</source>
-        <translation>Somnio Ydin</translation>
+        <source>Catocoin Core</source>
+        <translation>Catocoin Ydin</translation>
     </message>
     <message>
         <source>Usage:</source>
@@ -953,12 +953,12 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Tervetuloa</translation>
     </message>
     <message>
-        <source>Welcome to Somnio Core.</source>
-        <translation>Tervetuloa Somnio Ytimeen.</translation>
+        <source>Welcome to Catocoin Core.</source>
+        <translation>Tervetuloa Catocoin Ytimeen.</translation>
     </message>
     <message>
-        <source>Somnio Core</source>
-        <translation>Somnio Ydin</translation>
+        <source>Catocoin Core</source>
+        <translation>Catocoin Ydin</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1135,32 +1135,32 @@ Please check the address and try again.</source>
         <translation>Valitse yksityisyyden taso.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 SOMNIO</source>
-        <translation>Käytä 2 erillistä masternodea sekoittaaksesi enintään 10000 Somnio</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 CATOCOIN</source>
+        <translation>Käytä 2 erillistä masternodea sekoittaaksesi enintään 10000 Catocoin</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 SOMNIO</source>
-        <translation>Käytä 8 erillistä masternodea sekoittaaksesi enintään 10000 Somnio</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 CATOCOIN</source>
+        <translation>Käytä 8 erillistä masternodea sekoittaaksesi enintään 10000 Catocoin</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Käytä 16 erillistä masternodea</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 SOMNIO to anonymize 10000 SOMNIO</source>
-        <translation>Tämä vaihtoehto on nopein ja maksaa noin ~0.025 SOMNIO anonymoidaksesi 10000 Somnio</translation>
+        <source>This option is the quickest and will cost about ~0.025 CATOCOIN to anonymize 10000 CATOCOIN</source>
+        <translation>Tämä vaihtoehto on nopein ja maksaa noin ~0.025 CATOCOIN anonymoidaksesi 10000 Catocoin</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 SOMNIO to anonymize 10000 SOMNIO</source>
-        <translation>Tämä vaihtoehto on suhteellisen nopea ja maksaa 0.05 Somnio anonymoidaksesi 10000 Somnio</translation>
+        <source>This option is moderately fast and will cost about 0.05 CATOCOIN to anonymize 10000 CATOCOIN</source>
+        <translation>Tämä vaihtoehto on suhteellisen nopea ja maksaa 0.05 Catocoin anonymoidaksesi 10000 Catocoin</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Tämä on hitain ja turvallisin vaihtoehto. Täydesti anonymisoiminen ei maksa mitään.</translation>
     </message>
     <message>
-        <source>0.1 SOMNIO per 10000 SOMNIO you anonymize.</source>
-        <translation>0.1 per 10000 Somnio, jotka anonymisoit.</translation>
+        <source>0.1 CATOCOIN per 10000 CATOCOIN you anonymize.</source>
+        <translation>0.1 per 10000 Catocoin, jotka anonymisoit.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1209,12 +1209,12 @@ Please check the address and try again.</source>
         <translation>Ekspertti</translation>
     </message>
     <message>
-        <source>Automatically start Somnio after logging in to the system.</source>
-        <translation>Automaattisesti käynnistä Somnio kun kirjaudut sisään.</translation>
+        <source>Automatically start Catocoin after logging in to the system.</source>
+        <translation>Automaattisesti käynnistä Catocoin kun kirjaudut sisään.</translation>
     </message>
     <message>
-        <source>&amp;Start Somnio on system login</source>
-        <translation>&amp;Aloita Somnio järjestelmän kirjautumisessa</translation>
+        <source>&amp;Start Catocoin on system login</source>
+        <translation>&amp;Aloita Catocoin järjestelmän kirjautumisessa</translation>
     </message>
     <message>
         <source>Enable coin &amp;control features</source>
@@ -1233,12 +1233,12 @@ Please check the address and try again.</source>
         <translation>&amp;Verkko</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Somnio.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting Catocoin.</source>
         <translation>Käyttöliittymän kielen voi säätää täällä. Tämä asetus tulee voimaan uudelleenkäynnistettyäsi lompakon.</translation>
     </message>
     <message>
-        <source>Connect to the Somnio network through a SOCKS5 proxy.</source>
-        <translation>Yhdistä Somnio verkkoon SOCKS5 proxyn kautta</translation>
+        <source>Connect to the Catocoin network through a SOCKS5 proxy.</source>
+        <translation>Yhdistä Catocoin verkkoon SOCKS5 proxyn kautta</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1542,8 +1542,8 @@ Please check the address and try again.</source>
         <translation>Lohko ketju</translation>
     </message>
     <message>
-        <source>Open the Somnio debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Avaa Somnio debug loki nykyisestä sijainnista. Tämä voi kestää muutaman sekunnin suurille lokeille</translation>
+        <source>Open the Catocoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Avaa Catocoin debug loki nykyisestä sijainnista. Tämä voi kestää muutaman sekunnin suurille lokeille</translation>
     </message>
     <message>
         <source>Number of Masternodes</source>
@@ -1654,8 +1654,8 @@ Please check the address and try again.</source>
         <translation>Ulos:</translation>
     </message>
     <message>
-        <source>Welcome to the Somnio RPC console.</source>
-        <translation>Tervetuloa Somnio RPC konsoliin.</translation>
+        <source>Welcome to the Catocoin RPC console.</source>
+        <translation>Tervetuloa Catocoin RPC konsoliin.</translation>
     </message>
     <message>
         <source>never</source>
@@ -1697,12 +1697,12 @@ Please check the address and try again.</source>
         <translation>Vaihtoehtoinen nimike uudelle vastaanottavalle osoitteelle</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Somnio network.</source>
-        <translation>Vaihtoehtoinen viesti joka liitetään maksupyyntöön, joka näytetään kun pyyntö avataan. Huomio: Viestiä ei lähetetä maksun mukana Somnio verkolle.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Catocoin network.</source>
+        <translation>Vaihtoehtoinen viesti joka liitetään maksupyyntöön, joka näytetään kun pyyntö avataan. Huomio: Viestiä ei lähetetä maksun mukana Catocoin verkolle.</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Somnio network.</source>
-        <translation>Vaihtoehtoinen viesti, joka liitetään maksupyyntöö, joka näytetään kun pyyntö avataan. &lt;br&gt; Huomio: Tätä viestiä ei lähetetä maksun mukana Somnio  verkolle.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Catocoin network.</source>
+        <translation>Vaihtoehtoinen viesti, joka liitetään maksupyyntöö, joka näytetään kun pyyntö avataan. &lt;br&gt; Huomio: Tätä viestiä ei lähetetä maksun mukana Catocoin  verkolle.</translation>
     </message>
     <message>
         <source>Use this form to request payments. All fields are &lt;b&gt;optional&lt;/b&gt;.</source>
@@ -1898,8 +1898,8 @@ Please check the address and try again.</source>
         <translation>Muutos:</translation>
     </message>
     <message>
-        <source>0 SOMNIO</source>
-        <translation>0 SOMNIO</translation>
+        <source>0 CATOCOIN</source>
+        <translation>0 CATOCOIN</translation>
     </message>
     <message>
         <source>Choose...</source>
@@ -1982,8 +1982,8 @@ Please check the address and try again.</source>
         <translation>käyttää</translation>
     </message>
     <message>
-        <source>Warning: Invalid Somnio address</source>
-        <translation>Varoitus: Virheellinen Somnio osoite</translation>
+        <source>Warning: Invalid Catocoin address</source>
+        <translation>Varoitus: Virheellinen Catocoin osoite</translation>
     </message>
     <message>
         <source>Are you sure you want to send?</source>
@@ -2029,8 +2029,8 @@ Please check the address and try again.</source>
         <translation>Tämä on normaali maksu.</translation>
     </message>
     <message>
-        <source>The Somnio address to send the payment to</source>
-        <translation>Somnio osoite johon maksu lähetetään</translation>
+        <source>The Catocoin address to send the payment to</source>
+        <translation>Catocoin osoite johon maksu lähetetään</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2072,8 +2072,8 @@ Please check the address and try again.</source>
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Somnio Core is shutting down...</source>
-        <translation>Somnio core sammuu...</translation>
+        <source>Catocoin Core is shutting down...</source>
+        <translation>Catocoin core sammuu...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2091,8 +2091,8 @@ Please check the address and try again.</source>
         <translation>Voit allekirjoittaa viestejä osoitteillasi todistaaksesi, että omistat ne. Ole varovainen ettet allekirjoita mitään kummallista, sillä kalasteluyritykset saattavat yrittää huijata sinut luovuttamaan tietoja. Allekirjoita vain täysin yksityiskohtaisia sanomia, jotka hyväksyt.</translation>
     </message>
     <message>
-        <source>The Somnio address to sign the message with</source>
-        <translation>Somnio osoite, jolla viesti allekirjoitetaan</translation>
+        <source>The Catocoin address to sign the message with</source>
+        <translation>Catocoin osoite, jolla viesti allekirjoitetaan</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2123,16 +2123,16 @@ Please check the address and try again.</source>
         <translation>Kopioi nykyinen allekirjoitus järjestelmän leikepöydälle</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Somnio address</source>
-        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Somnio osoitteen</translation>
+        <source>Sign the message to prove you own this Catocoin address</source>
+        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Catocoin osoitteen</translation>
     </message>
     <message>
-        <source>The Somnio address the message was signed with</source>
-        <translation>Somnio osoite, jolla viesti allekirjoitettiin</translation>
+        <source>The Catocoin address the message was signed with</source>
+        <translation>Catocoin osoite, jolla viesti allekirjoitettiin</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Somnio address</source>
-        <translation>Vahvista että viesti on allekirjoitettu kyseessä olevalla Somnio osoitteella.</translation>
+        <source>Verify the message to ensure it was signed with the specified Catocoin address</source>
+        <translation>Vahvista että viesti on allekirjoitettu kyseessä olevalla Catocoin osoitteella.</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2214,8 +2214,8 @@ Please check the address and try again.</source>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Somnio Core</source>
-        <translation>Somnio Ydin</translation>
+        <source>Catocoin Core</source>
+        <translation>Catocoin Ydin</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -2230,8 +2230,8 @@ Please check the address and try again.</source>
         <translation>Dash Core kehittäjät</translation>
     </message>
     <message>
-        <source>The Somnio Core developers</source>
-        <translation>Somnio core kehittäjät</translation>
+        <source>The Catocoin Core developers</source>
+        <translation>Catocoin core kehittäjät</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -2541,7 +2541,7 @@ Please check the address and try again.</source>
     </message>
     </context>
 <context>
-    <name>somnio-core</name>
+    <name>catocoin-core</name>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
         <translation>Varoitus: Verkko ei näytä olevan samaa mieltä! Jotkin mainaajat saattavat kokea ongelmia.</translation>
@@ -2591,8 +2591,8 @@ Please check the address and try again.</source>
         <translation>Virhe ladattaessa wallet.dat tiedostoa: Lompakko korruptoitunut</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of Somnio Core</source>
-        <translation>Virhe ladattaessa wallet.dat tiedostoa: Lompakko vaatii uudemman version Somnio Coresta</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Catocoin Core</source>
+        <translation>Virhe ladattaessa wallet.dat tiedostoa: Lompakko vaatii uudemman version Catocoin Coresta</translation>
     </message>
     <message>
         <source>Error reading from database, shutting down.</source>

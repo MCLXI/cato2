@@ -62,12 +62,12 @@
         <translation>Indirizzi di ricezione</translation>
     </message>
     <message>
-        <source>These are your Somnio addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Questi sono gli indirizzi Somnio per l'invio di pagamenti. Controlla sempre l'importo e l'indirizzo di ricezione prima di inviare valuta.</translation>
+        <source>These are your Catocoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Questi sono gli indirizzi Catocoin per l'invio di pagamenti. Controlla sempre l'importo e l'indirizzo di ricezione prima di inviare valuta.</translation>
     </message>
     <message>
-        <source>These are your Somnio addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Questi sono gli indirizzi Somnio per la ricezione di pagamenti. Si raccomanda di utilizzare un indirizzo diverso per ogni transazione.</translation>
+        <source>These are your Catocoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Questi sono gli indirizzi Catocoin per la ricezione di pagamenti. Si raccomanda di utilizzare un indirizzo diverso per ogni transazione.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,16 +176,16 @@
         <translation>Conferma cifratura portafoglio</translation>
     </message>
     <message>
-        <source>Somnio will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your SMNs from being stolen by malware infecting your computer.</source>
-        <translation>Somnio verrà ora chiuso per completare il processo di cifratura. Ricorda che crittografare il tuo portafoglio non protegge completamente i tuoi SMN dal furto da parte di software malevoli che potrebbero infettare il tuo computer.</translation>
+        <source>Catocoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your CATOs from being stolen by malware infecting your computer.</source>
+        <translation>Catocoin verrà ora chiuso per completare il processo di cifratura. Ricorda che crittografare il tuo portafoglio non protegge completamente i tuoi CATO dal furto da parte di software malevoli che potrebbero infettare il tuo computer.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Confermi di voler crittografare il portafoglio?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SMN&lt;/b&gt;!</source>
-        <translation>Attenzione: Se crittografi il portafoglio e poi perdi la parola d'ordine, &lt;b&gt;PERDERAI TUTTI I TUOI SMN&lt;7b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CATO&lt;/b&gt;!</source>
+        <translation>Attenzione: Se crittografi il portafoglio e poi perdi la parola d'ordine, &lt;b&gt;PERDERAI TUTTI I TUOI CATO&lt;7b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -239,16 +239,16 @@
         <translation>&amp;BIP 38 Criptato</translation>
     </message>
     <message>
-        <source>Enter a Somnio Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Inserisci un indirizzo Somnio che desideri crittografare utilizzando BIP 38. Inserisci una passphrase nella casella centrale. Premi Cripta per calcolare la chiave privata crittografata.</translation>
+        <source>Enter a Catocoin Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Inserisci un indirizzo Catocoin che desideri crittografare utilizzando BIP 38. Inserisci una passphrase nella casella centrale. Premi Cripta per calcolare la chiave privata crittografata.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Indirizzo:</translation>
     </message>
     <message>
-        <source>The Somnio address to sign the message with</source>
-        <translation>L'indirizzo Somnio per firmare il messaggio con</translation>
+        <source>The Catocoin address to sign the message with</source>
+        <translation>L'indirizzo Catocoin per firmare il messaggio con</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -279,8 +279,8 @@
         <translation>Copiare la firma corrente negli Appunti di sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Somnio address</source>
-        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo Somnio</translation>
+        <source>Sign the message to prove you own this Catocoin address</source>
+        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo Catocoin</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -303,12 +303,12 @@
         <translation>Immettere la chiave privata codificata BIP 38. Inserire la passphrase nella casella centrale. Fare clic su Decripta Chiave per calcolare la chiave privata. Dopo che la chiave viene decrittata, cliccando su "Importa indirizzo" verrà aggiunta questa chiave privata al portafoglio.</translation>
     </message>
     <message>
-        <source>The Somnio address the message was signed with</source>
-        <translation>L'indirizzo Somnio con cui è stato firmato il messaggio</translation>
+        <source>The Catocoin address the message was signed with</source>
+        <translation>L'indirizzo Catocoin con cui è stato firmato il messaggio</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Somnio address</source>
-        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo Somnio specificato </translation>
+        <source>Verify the message to ensure it was signed with the specified Catocoin address</source>
+        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo Catocoin specificato </translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -590,16 +590,16 @@
         <translation>Schede degli strumenti</translation>
     </message>
     <message>
-        <source>Somnio Core</source>
-        <translation>Somnio Core</translation>
+        <source>Catocoin Core</source>
+        <translation>Catocoin Core</translation>
     </message>
     <message>
-        <source>Send coins to a Somnio address</source>
-        <translation>Invia monete all' indirizzo Somnio</translation>
+        <source>Send coins to a Catocoin address</source>
+        <translation>Invia monete all' indirizzo Catocoin</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and somnio: URIs)</source>
-        <translation>Richiedi pagamenti (genera codici QR e somnio: URIs)</translation>
+        <source>Request payments (generates QR codes and catocoin: URIs)</source>
+        <translation>Richiedi pagamenti (genera codici QR e catocoin: URIs)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -610,24 +610,24 @@
         <translation>Esplora i masternodes</translation>
     </message>
     <message>
-        <source>&amp;About Somnio Core</source>
-        <translation>&amp;Informazioni Somnio Core</translation>
+        <source>&amp;About Catocoin Core</source>
+        <translation>&amp;Informazioni Catocoin Core</translation>
     </message>
     <message>
-        <source>Show information about Somnio Core</source>
-        <translation>Visualizza informazioni su Somnio Core</translation>
+        <source>Show information about Catocoin Core</source>
+        <translation>Visualizza informazioni su Catocoin Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for Somnio</source>
-        <translation>Modifica le opzioni di configurazione per Somnio</translation>
+        <source>Modify configuration options for Catocoin</source>
+        <translation>Modifica le opzioni di configurazione per Catocoin</translation>
     </message>
     <message>
-        <source>Sign messages with your Somnio addresses to prove you own them</source>
-        <translation>Firma i messaggi con i tuoi indirizzi Somnio per dimostrare di essere il proprietario </translation>
+        <source>Sign messages with your Catocoin addresses to prove you own them</source>
+        <translation>Firma i messaggi con i tuoi indirizzi Catocoin per dimostrare di essere il proprietario </translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Somnio addresses</source>
-        <translation>Verifica i messaggi per assicurarsi che siano stati firmati con indirizzi Somnio specifici</translation>
+        <source>Verify messages to ensure they were signed with specified Catocoin addresses</source>
+        <translation>Verifica i messaggi per assicurarsi che siano stati firmati con indirizzi Catocoin specifici</translation>
     </message>
     <message>
         <source>Encrypt and decrypt private keys using a passphrase</source>
@@ -638,16 +638,16 @@
         <translation>Impostazioni MultiSend</translation>
     </message>
     <message>
-        <source>Open a Somnio: URI or payment request</source>
-        <translation>Apri un Somnio: URI o richiesta di pagamento</translation>
+        <source>Open a Catocoin: URI or payment request</source>
+        <translation>Apri un Catocoin: URI o richiesta di pagamento</translation>
     </message>
     <message>
         <source>Block explorer window</source>
         <translation>Finestra Block Explorer</translation>
     </message>
     <message>
-        <source>Show the Somnio Core help message to get a list with possible Somnio command-line options</source>
-        <translation>Mostra il messaggio di aiuto Somnio Core per ottenere un elenco con le possibili opzioni di riga di comando Somnio</translation>
+        <source>Show the Catocoin Core help message to get a list with possible Catocoin command-line options</source>
+        <translation>Mostra il messaggio di aiuto Catocoin Core per ottenere un elenco con le possibili opzioni di riga di comando Catocoin</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -753,8 +753,8 @@ MultiSend: %1</translation>
         <translation>Cerca</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (somnio2.conf).</source>
-        <translation>Non tutte le transazioni verranno visualizzate. Per vedere tutte le transazioni è necessario aggiungere txindex=1 nel file di configurazione (somnio2.conf)</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (catocoin2.conf).</source>
+        <translation>Non tutte le transazioni verranno visualizzate. Per vedere tutte le transazioni è necessario aggiungere txindex=1 nel file di configurazione (catocoin2.conf)</translation>
     </message>
 </context>
 <context>
@@ -888,8 +888,8 @@ MultiSend: %1</translation>
         <translation>versione</translation>
     </message>
     <message>
-        <source>Somnio Core</source>
-        <translation>Somnio Core</translation>
+        <source>Catocoin Core</source>
+        <translation>Catocoin Core</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
@@ -915,8 +915,8 @@ MultiSend: %1</translation>
         <translation>Benvenuto</translation>
     </message>
     <message>
-        <source>Somnio Core</source>
-        <translation>Somnio Core</translation>
+        <source>Catocoin Core</source>
+        <translation>Catocoin Core</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1144,8 +1144,8 @@ MultiSend: %1</translation>
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The Somnio address to sign the message with</source>
-        <translation>L'indirizzo Somnio per firmare il messaggio con</translation>
+        <source>The Catocoin address to sign the message with</source>
+        <translation>L'indirizzo Catocoin per firmare il messaggio con</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1168,16 +1168,16 @@ MultiSend: %1</translation>
         <translation>Copiare la firma corrente negli Appunti di sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Somnio address</source>
-        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo Somnio</translation>
+        <source>Sign the message to prove you own this Catocoin address</source>
+        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo Catocoin</translation>
     </message>
     <message>
-        <source>The Somnio address the message was signed with</source>
-        <translation>L'indirizzo Somnio con cui è stato firmato il messaggio</translation>
+        <source>The Catocoin address the message was signed with</source>
+        <translation>L'indirizzo Catocoin con cui è stato firmato il messaggio</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Somnio address</source>
-        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo Somnio specificato </translation>
+        <source>Verify the message to ensure it was signed with the specified Catocoin address</source>
+        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo Catocoin specificato </translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -1215,8 +1215,8 @@ MultiSend: %1</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Somnio Core</source>
-        <translation>Somnio Core</translation>
+        <source>Catocoin Core</source>
+        <translation>Catocoin Core</translation>
     </message>
     </context>
 <context>
@@ -1314,7 +1314,7 @@ MultiSend: %1</translation>
     <name>ZPhrControlDialog</name>
     </context>
 <context>
-    <name>somnio-core</name>
+    <name>catocoin-core</name>
     <message>
         <source>Error</source>
         <translation>Errore</translation>
