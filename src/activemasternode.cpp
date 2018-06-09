@@ -471,8 +471,50 @@ vector<COutput> CActiveMasternode::SelectCoinsMasternode()
     }
 
     // Filter
+    //check outputs by MN enabled
+    CAmount collat_required;
+    collat_required = 1000 * COIN;
+    int active_nodes = mnodeman.CountEnabled();
+    if (active_nodes <= 30) {
+	collat_required = 1000 * COIN
+    } else if (active_nodes <= 60) {
+	collat_required = 1200 * COIN;
+    } else if (active_nodes <= 90) {
+	collat_required = 1300 * COIN;
+    } else if (active_nodes <= 120) {
+        collat_required = 1400 * COIN;
+    } else if (active_nodes <= 150) {
+        collat_required = 1425 * COIN;
+    } else if (active_nodes <= 180) {
+        collat_required = 1550 * COIN;
+    } else if (active_nodes <= 210) {
+        collat_required = 1675 * COIN;
+    } else if (active_nodes <= 240) {
+        collat_required = 1800 * COIN;
+    } else if (active_nodes <= 270) {
+        collat_required = 1925 * COIN;
+    } else if (active_nodes <= 300) {
+        collat_required = 2075 * COIN;
+    } else if (active_nodes <= 330) {
+        collat_required = 2275 * COIN;
+    } else if (active_nodes <= 360) {
+        collat_required = 2450 * COIN;
+    } else if (active_nodes <= 390) {
+        collat_required = 2675 * COIN;
+    } else if (active_nodes <= 420) {
+        collat_required = 2900 * COIN;
+    } else if (active_nodes <= 450) {
+        collat_required = 3100 * COIN;
+    } else if (active_nodes <= 480) {
+        collat_required = 3375 * COIN;
+    } else if (active_nodes <= 510) {
+        collat_required = 3675 * COIN;
+    } else if (active_nodes >= 511) {
+        collat_required = 4000 * COIN;
+    }
+
     BOOST_FOREACH (const COutput& out, vCoins) {
-        if (out.tx->vout[out.i].nValue == 5000 * COIN) { //exactly
+        if (out.tx->vout[out.i].nValue == collat_required) { //exactly
             filteredCoins.push_back(out);
         }
     }

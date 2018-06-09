@@ -2127,12 +2127,56 @@ int64_t GetBlockValue(int nHeight)
     }
 
     if (nHeight == 0) {
-        nSubsidy = 1 * COIN;  //genesis
+        return 1 * COIN;  //genesis
     } else if(nHeight == 1 ){
-        nSubsidy = 1000000 * COIN;  //1,000,000
+        return  200000 * COIN;  //200k premine
     } else if(nHeight > 1 && nHeight <= 100) {
-		nSubsidy = 1 * COIN;
-	} else if(nHeight > 100 && nHeight <= 200) { //PoS phase
+	return  .01 * COIN;
+	} 
+//switch POS
+    } else if (nHeight > 100) {
+	if (nHeight < 20161) {
+		return .01 * COIN;
+	}
+	int enabled_nodes = mnodeman.CountEnabled();
+	if (enabled_nodes <= 30) {
+		nSubsidy =  9.2 * COIN;
+	} else if (enabled_nodes <= 60) {
+		nSubsidy = 12 * COIN;
+	} else if (enabled_nodes <= 90) {
+		nSubsidy = 12.65 * COIN;
+	} else if (enabled_nodes <= 120 {
+		nSubsidy = 13.8 * COIN;
+	} else if (enabled_nodes <= 150 {
+                nSubsidy = 14.95 * COIN;
+       } else if (enabled_nodes <= 180 {
+                nSubsidy = 16.1 * COIN;
+       } else if (enabled_nodes <= 210 {
+                nSubsidy = 17.25 * COIN;
+       } else if (enabled_nodes <= 240 {
+                nSubsidy = 18.40 * COIN;
+       } else if (enabled_nodes <= 270 {
+                nSubsidy = 19.55 * COIN;
+       } else if (enabled_nodes <= 300 {
+                nSubsidy = 20.70 * COIN;
+       } else if (enabled_nodes <= 330 {
+                nSubsidy = 21.85 * COIN;
+       } else if (enabled_nodes <= 360 {
+                nSubsidy = 23.00 * COIN;
+       } else if (enabled_nodes <= 390 {
+                nSubsidy = 24.15 * COIN;
+       } else if (enabled_nodes <= 420 {
+                nSubsidy = 25.30 * COIN;
+       } else if (enabled_nodes <= 450 {
+                nSubsidy = 26.45 * COIN;
+	} else if (enabled_nodes <= 480{
+                nSubsidy = 27.60 * COIN;
+	} else if (enabled_nodes <= 510 {
+                nSubsidy = 28.75 * COIN;
+	} else if (enabled_nodes >= 511 {
+                nSubsidy = 29.90 * COIN;
+	}
+/*else if(nHeight > 100 && nHeight <= 200) { //PoS phase
 		nSubsidy = 5 * COIN; // "instamine"
     } else if(nHeight > 200 && nHeight <= 300) {
 		nSubsidy = 10 * COIN;
@@ -2154,7 +2198,7 @@ int64_t GetBlockValue(int nHeight)
                 nSubsidy = 3 * COIN;
     } else {
         nSubsidy = 1 * COIN;
-    }
+    }*/
     return nSubsidy;
 }
 
