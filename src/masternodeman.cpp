@@ -986,7 +986,47 @@ void CMasternodeMan::ProcessMessage(CNode* pfrom, std::string& strCommand, CData
 
         CValidationState state;
         CMutableTransaction tx = CMutableTransaction();
-        CTxOut vout = CTxOut(4999.99 * COIN, obfuScationPool.collateralPubKey);
+    CAmount collat_required;
+    collat_required = 999.99 * COIN;
+    int active_nodes = mnodeman.CountEnabled();
+    if (active_nodes <= 30) {
+	collat_required = 999.99 * COIN
+    } else if (active_nodes <= 60) {
+	collat_required = 1199.99 * COIN;
+    } else if (active_nodes <= 90) {
+	collat_required = 1299.99 * COIN;
+    } else if (active_nodes <= 120) {
+        collat_required = 1399.99 * COIN;
+    } else if (active_nodes <= 150) {
+        collat_required = 1424.99 * COIN;
+    } else if (active_nodes <= 180) {
+        collat_required = 1549.99 * COIN;
+    } else if (active_nodes <= 210) {
+        collat_required = 1674.99 * COIN;
+    } else if (active_nodes <= 240) {
+        collat_required = 1799.99 * COIN;
+    } else if (active_nodes <= 270) {
+        collat_required = 1924.99 * COIN;
+    } else if (active_nodes <= 300) {
+        collat_required = 2074.99 * COIN;
+    } else if (active_nodes <= 330) {
+        collat_required = 2274.99 * COIN;
+    } else if (active_nodes <= 360) {
+        collat_required = 2449.99 * COIN;
+    } else if (active_nodes <= 390) {
+        collat_required = 2674.99 * COIN;
+    } else if (active_nodes <= 420) {
+        collat_required = 2899.99 * COIN;
+    } else if (active_nodes <= 450) {
+        collat_required = 3099.99 * COIN;
+    } else if (active_nodes <= 480) {
+        collat_required = 3374.99 * COIN;
+    } else if (active_nodes <= 510) {
+        collat_required = 3674.99 * COIN;
+    } else if (active_nodes >= 511) {
+        collat_required = 3999.99 * COIN;
+    }
+        CTxOut vout = CTxOut(collat_required, obfuScationPool.collateralPubKey);
         tx.vin.push_back(vin);
         tx.vout.push_back(vout);
 

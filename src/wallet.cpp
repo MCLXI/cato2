@@ -22,6 +22,7 @@
 #include "timedata.h"
 #include "util.h"
 #include "utilmoneystr.h"
+#include "masternodeman.h"
 
 #include "denomination_functions.h"
 #include "libzerocoin/Denominations.h"
@@ -1619,19 +1620,59 @@ void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed, const
             // It's possible for these to be conflicted via ancestors which we may never be able to detect
             if (nDepth == 0 && !pcoin->InMempool())
                 continue;
-
+    //check outputs by MN enabled
+    CAmount collat_required;
+    collat_required = 1000 * COIN;
+    int active_nodes = mnodeman.CountEnabled();
+    if (active_nodes <= 30) {
+	collat_required = 1000 * COIN
+    } else if (active_nodes <= 60) {
+	collat_required = 1200 * COIN;
+    } else if (active_nodes <= 90) {
+	collat_required = 1300 * COIN;
+    } else if (active_nodes <= 120) {
+        collat_required = 1400 * COIN;
+    } else if (active_nodes <= 150) {
+        collat_required = 1425 * COIN;
+    } else if (active_nodes <= 180) {
+        collat_required = 1550 * COIN;
+    } else if (active_nodes <= 210) {
+        collat_required = 1675 * COIN;
+    } else if (active_nodes <= 240) {
+        collat_required = 1800 * COIN;
+    } else if (active_nodes <= 270) {
+        collat_required = 1925 * COIN;
+    } else if (active_nodes <= 300) {
+        collat_required = 2075 * COIN;
+    } else if (active_nodes <= 330) {
+        collat_required = 2275 * COIN;
+    } else if (active_nodes <= 360) {
+        collat_required = 2450 * COIN;
+    } else if (active_nodes <= 390) {
+        collat_required = 2675 * COIN;
+    } else if (active_nodes <= 420) {
+        collat_required = 2900 * COIN;
+    } else if (active_nodes <= 450) {
+        collat_required = 3100 * COIN;
+    } else if (active_nodes <= 480) {
+        collat_required = 3375 * COIN;
+    } else if (active_nodes <= 510) {
+        collat_required = 3675 * COIN;
+    } else if (active_nodes >= 511) {
+        collat_required = 4000 * COIN;
+    }
             for (unsigned int i = 0; i < pcoin->vout.size(); i++) {
                 bool found = false;
                 if (nCoinType == ONLY_DENOMINATED) {
                     found = IsDenominatedAmount(pcoin->vout[i].nValue);
                 } else if (nCoinType == ONLY_NOT10000IFMN) {
-                    found = !(fMasterNode && pcoin->vout[i].nValue == 5000 * COIN);
+                    found = !(fMasterNode && pcoin->vout[i].nValue == collat_required);
                 } else if (nCoinType == ONLY_NONDENOMINATED_NOT10000IFMN) {
                     if (IsCollateralAmount(pcoin->vout[i].nValue)) continue; // do not use collateral amounts
                     found = !IsDenominatedAmount(pcoin->vout[i].nValue);
-                    if (found && fMasterNode) found = pcoin->vout[i].nValue != 5000 * COIN; // do not use Hot MN funds
+                    if (found && fMasterNode) found = pcoin->vout[i].nValue != collat_required; // do not use Hot MN funds
                 } else if (nCoinType == ONLY_10000) {
-                    found = pcoin->vout[i].nValue == 5000 * COIN;
+                    found = pcoin->vout[i].nValue == collat_required;
                 } else {
                     found = true;
                 }
@@ -2090,13 +2131,53 @@ bool CWallet::SelectCoinsDark(CAmount nValueMin, CAmount nValueMax, std::vector<
 
     //order the array so largest nondenom are first, then denominations, then very small inputs.
     sort(vCoins.rbegin(), vCoins.rend(), CompareByPriority());
-
+    //check outputs by MN enabled
+    CAmount collat_required;
+    collat_required = 1000 * COIN;
+    int active_nodes = mnodeman.CountEnabled();
+    if (active_nodes <= 30) {
+	collat_required = 1000 * COIN
+    } else if (active_nodes <= 60) {
+	collat_required = 1200 * COIN;
+    } else if (active_nodes <= 90) {
+	collat_required = 1300 * COIN;
+    } else if (active_nodes <= 120) {
+        collat_required = 1400 * COIN;
+    } else if (active_nodes <= 150) {
+        collat_required = 1425 * COIN;
+    } else if (active_nodes <= 180) {
+        collat_required = 1550 * COIN;
+    } else if (active_nodes <= 210) {
+        collat_required = 1675 * COIN;
+    } else if (active_nodes <= 240) {
+        collat_required = 1800 * COIN;
+    } else if (active_nodes <= 270) {
+        collat_required = 1925 * COIN;
+    } else if (active_nodes <= 300) {
+        collat_required = 2075 * COIN;
+    } else if (active_nodes <= 330) {
+        collat_required = 2275 * COIN;
+    } else if (active_nodes <= 360) {
+        collat_required = 2450 * COIN;
+    } else if (active_nodes <= 390) {
+        collat_required = 2675 * COIN;
+    } else if (active_nodes <= 420) {
+        collat_required = 2900 * COIN;
+    } else if (active_nodes <= 450) {
+        collat_required = 3100 * COIN;
+    } else if (active_nodes <= 480) {
+        collat_required = 3375 * COIN;
+    } else if (active_nodes <= 510) {
+        collat_required = 3675 * COIN;
+    } else if (active_nodes >= 511) {
+        collat_required = 4000 * COIN;
+    }
     BOOST_FOREACH (const COutput& out, vCoins) {
         //do not allow inputs less than 1 CENT
         if (out.tx->vout[out.i].nValue < CENT) continue;
         //do not allow collaterals to be selected
         if (IsCollateralAmount(out.tx->vout[out.i].nValue)) continue;
-        if (fMasterNode && out.tx->vout[out.i].nValue == 5000 * COIN) continue; //masternode input
+        if (fMasterNode && out.tx->vout[out.i].nValue == collat_required) continue; //masternode input
 
         if (nValueRet + out.tx->vout[out.i].nValue <= nValueMax) {
             CTxIn vin = CTxIn(out.tx->GetHash(), out.i);
