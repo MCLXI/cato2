@@ -990,7 +990,7 @@ void CMasternodeMan::ProcessMessage(CNode* pfrom, std::string& strCommand, CData
     collat_required = 999.99 * COIN;
     int active_nodes = mnodeman.CountEnabled();
     if (active_nodes <= 30) {
-	collat_required = 999.99 * COIN
+	collat_required = 999.99 * COIN;
     } else if (active_nodes <= 60) {
 	collat_required = 1199.99 * COIN;
     } else if (active_nodes <= 90) {

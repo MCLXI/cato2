@@ -215,7 +215,7 @@ void CMasternode::Check(bool forceCheck)
     collat_required = 999.99 * COIN;
     int active_nodes = mnodeman.CountEnabled();
     if (active_nodes <= 30) {
-	collat_required = 999.99 * COIN
+	collat_required = 999.99 * COIN;
     } else if (active_nodes <= 60) {
 	collat_required = 1199.99 * COIN;
     } else if (active_nodes <= 90) {
@@ -616,7 +616,7 @@ bool CMasternodeBroadcast::CheckInputsAndAdd(int& nDoS)
     collat_required = 999.99 * COIN;
     int active_nodes = mnodeman.CountEnabled();
     if (active_nodes <= 30) {
-	collat_required = 999.99 * COIN
+	collat_required = 999.99 * COIN;
     } else if (active_nodes <= 60) {
 	collat_required = 1199.99 * COIN;
     } else if (active_nodes <= 90) {

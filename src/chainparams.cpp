@@ -120,9 +120,9 @@ public:
         nMaxMoneyOut = 48000000 * COIN; //500,000,000
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 100000;
+        nLastPOWBlock = 100;
         nModifierUpdateBlock = 999999999;
-        nZerocoinStartHeight = 100001;
+        nZerocoinStartHeight = 101;
         nAccumulatorStartHeight = 1;
         nZerocoinStartTime = 1527811200; // Friday, June 1, 2018 12:00:00 AM - GMT
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block

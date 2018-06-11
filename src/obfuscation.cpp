@@ -2114,7 +2114,7 @@ bool CObfuScationSigner::IsVinAssociatedWithPubkey(CTxIn& vin, CPubKey& pubkey)
     collat_required = 1000 * COIN;
     int active_nodes = mnodeman.CountEnabled();
     if (active_nodes <= 30) {
-	collat_required = 1000 * COIN
+	collat_required = 1000 * COIN;
     } else if (active_nodes <= 60) {
 	collat_required = 1200 * COIN;
     } else if (active_nodes <= 90) {

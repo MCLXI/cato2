@@ -2132,7 +2132,6 @@ int64_t GetBlockValue(int nHeight)
         return  200000 * COIN;  //200k premine
     } else if(nHeight > 1 && nHeight <= 100) {
 	return  .01 * COIN;
-	} 
 //switch POS
     } else if (nHeight > 100) {
 	if (nHeight < 20161) {
@@ -2145,37 +2144,38 @@ int64_t GetBlockValue(int nHeight)
 		nSubsidy = 12 * COIN;
 	} else if (enabled_nodes <= 90) {
 		nSubsidy = 12.65 * COIN;
-	} else if (enabled_nodes <= 120 {
+	} else if (enabled_nodes <= 120) {
 		nSubsidy = 13.8 * COIN;
-	} else if (enabled_nodes <= 150 {
+	} else if (enabled_nodes <= 150) {
                 nSubsidy = 14.95 * COIN;
-       } else if (enabled_nodes <= 180 {
+       } else if (enabled_nodes <= 180) {
                 nSubsidy = 16.1 * COIN;
-       } else if (enabled_nodes <= 210 {
+       } else if (enabled_nodes <= 210) {
                 nSubsidy = 17.25 * COIN;
-       } else if (enabled_nodes <= 240 {
+       } else if (enabled_nodes <= 240) {
                 nSubsidy = 18.40 * COIN;
-       } else if (enabled_nodes <= 270 {
+       } else if (enabled_nodes <= 270) {
                 nSubsidy = 19.55 * COIN;
-       } else if (enabled_nodes <= 300 {
+       } else if (enabled_nodes <= 300) {
                 nSubsidy = 20.70 * COIN;
-       } else if (enabled_nodes <= 330 {
+       } else if (enabled_nodes <= 330) {
                 nSubsidy = 21.85 * COIN;
-       } else if (enabled_nodes <= 360 {
+       } else if (enabled_nodes <= 360) {
                 nSubsidy = 23.00 * COIN;
-       } else if (enabled_nodes <= 390 {
+       } else if (enabled_nodes <= 390) {
                 nSubsidy = 24.15 * COIN;
-       } else if (enabled_nodes <= 420 {
+       } else if (enabled_nodes <= 420) {
                 nSubsidy = 25.30 * COIN;
-       } else if (enabled_nodes <= 450 {
+       } else if (enabled_nodes <= 450) {
                 nSubsidy = 26.45 * COIN;
-	} else if (enabled_nodes <= 480{
+	} else if (enabled_nodes <= 480) {
                 nSubsidy = 27.60 * COIN;
-	} else if (enabled_nodes <= 510 {
+	} else if (enabled_nodes <= 510) {
                 nSubsidy = 28.75 * COIN;
-	} else if (enabled_nodes >= 511 {
+	} else if (enabled_nodes >= 511) {
                 nSubsidy = 29.90 * COIN;
 	}
+}
 /*else if(nHeight > 100 && nHeight <= 200) { //PoS phase
 		nSubsidy = 5 * COIN; // "instamine"
     } else if(nHeight > 200 && nHeight <= 300) {
@@ -2212,14 +2212,9 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
     }
 	
 	// 80% for Masternodes
-	if (nHeight <= 1500) {
-	      ret = blockValue *.000001;
-	} else if (nHeight > 1) {
-		  ret = blockValue  / 100 * 85; //85%
-		
+	if (nHeight > 1) {
+		  ret = blockValue  / 100 * 70; //70%
 	}
-			
-	
     return ret;
 }
 

@@ -1625,7 +1625,7 @@ void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed, const
     collat_required = 1000 * COIN;
     int active_nodes = mnodeman.CountEnabled();
     if (active_nodes <= 30) {
-	collat_required = 1000 * COIN
+	collat_required = 1000 * COIN;
     } else if (active_nodes <= 60) {
 	collat_required = 1200 * COIN;
     } else if (active_nodes <= 90) {
@@ -2136,7 +2136,7 @@ bool CWallet::SelectCoinsDark(CAmount nValueMin, CAmount nValueMax, std::vector<
     collat_required = 1000 * COIN;
     int active_nodes = mnodeman.CountEnabled();
     if (active_nodes <= 30) {
-	collat_required = 1000 * COIN
+	collat_required = 1000 * COIN;
     } else if (active_nodes <= 60) {
 	collat_required = 1200 * COIN;
     } else if (active_nodes <= 90) {
