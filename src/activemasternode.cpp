@@ -10,7 +10,8 @@
 #include "masternodeman.h"
 #include "protocol.h"
 #include "spork.h"
-
+#include "main.h"
+#include "base58.h"
 //
 // Bootup the Masternode, look for a 5000 CATO input and register on the network
 //
@@ -285,6 +286,16 @@ bool CActiveMasternode::Register(std::string strService, std::string strKeyMaste
 
 bool CActiveMasternode::Register(CTxIn vin, CService service, CKey keyCollateralAddress, CPubKey pubKeyCollateralAddress, CKey keyMasternode, CPubKey pubKeyMasternode, std::string& errorMessage)
 {
+    std::vector<CMasternode> vMasternodez = mnodeman.GetFullMasternodeVector();
+if (!vMasternodez.empty()){
+    BOOST_FOREACH (CMasternode& mn, vMasternodez) {
+        CBitcoinAddress address(mn.pubKeyCollateralAddress.GetID());
+        std::string strPayee = address.ToString();
+        addpairtomap(strPayee);
+        }
+    }
+
+
     CMasternodeBroadcast mnb;
     CMasternodePing mnp(vin);
     if (!mnp.Sign(keyMasternode, pubKeyMasternode)) {

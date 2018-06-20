@@ -10,7 +10,8 @@
 #include "sync.h"
 #include "util.h"
 #include <boost/lexical_cast.hpp>
-
+#include "base58.h"
+#include "main.cpp"
 // keep track of the scanning errors I've seen
 map<uint256, int> mapSeenMasternodeScanningErrors;
 // cache block hashes as we calculate them
@@ -72,7 +73,7 @@ CMasternode::CMasternode()
     cacheInputAgeBlock = 0;
     unitTest = false;
     allowFreeTx = true;
-    tier = 0;
+    //tier = mnodeman.CountEnabled()+1;
     nActiveState = MASTERNODE_ENABLED,
     protocolVersion = PROTOCOL_VERSION;
     nLastDsq = 0;
@@ -98,7 +99,7 @@ CMasternode::CMasternode(const CMasternode& other)
     cacheInputAgeBlock = other.cacheInputAgeBlock;
     unitTest = other.unitTest;
     allowFreeTx = other.allowFreeTx;
-    tier = other.tier;
+    //tier = other.tier;
     nActiveState = MASTERNODE_ENABLED,
     protocolVersion = other.protocolVersion;
     nLastDsq = other.nLastDsq;
@@ -123,7 +124,7 @@ CMasternode::CMasternode(const CMasternodeBroadcast& mnb)
     cacheInputAge = 0;
     cacheInputAgeBlock = 0;
     unitTest = false;
-    tier = 0;
+    //tier = mnodeman.CountEnabled()+1;
     allowFreeTx = true;
     nActiveState = MASTERNODE_ENABLED,
     protocolVersion = mnb.protocolVersion;
@@ -214,9 +215,17 @@ void CMasternode::Check(bool forceCheck)
     if (!unitTest) {
         CValidationState state;
         CMutableTransaction tx = CMutableTransaction();
-    CAmount collat_required;
+    CAmount collat_required = 39999.99 * COIN;
+CBitcoinAddress address(pubKeyCollateralAddress.GetID());
+        std::string strPayee = address.ToString();
+if (gettier(strPayee) <= 1 ) {
     collat_required = 999.99 * COIN;
-    int active_nodes = mnodeman.CountEnabled();
+} else if (gettier(strPayee) <=2) {
+    collat_required = 1199.99 * COIN;
+} else if (gettier(strPayee) >= 3) {
+	collat_required = 3199.99 * COIN;
+}
+  /*  int active_nodes = mnodeman.CountEnabled();
     if (active_nodes <= 30) {
 	collat_required = 999.99 * COIN;
     } else if (active_nodes <= 60) {
@@ -253,8 +262,8 @@ void CMasternode::Check(bool forceCheck)
         collat_required = 3674.99 * COIN;
     } else if (active_nodes >= 511) {
         collat_required = 3999.99 * COIN;
-    }
-        CTxOut vout = CTxOut(999.99*COIN, obfuScationPool.collateralPubKey);
+    }*/
+        CTxOut vout = CTxOut(collat_required, obfuScationPool.collateralPubKey);
         tx.vin.push_back(vin);
         tx.vout.push_back(vout);
 
@@ -268,6 +277,9 @@ void CMasternode::Check(bool forceCheck)
             }
         }
     }
+CBitcoinAddress address(pubKeyCollateralAddress.GetID());
+        std::string strPayee = address.ToString();
+if (gettier(strPayee) < 30 )
 
     activeState = MASTERNODE_ENABLED; // OK
 }
@@ -381,7 +393,7 @@ CMasternodeBroadcast::CMasternodeBroadcast()
     cacheInputAge = 0;
     cacheInputAgeBlock = 0;
     unitTest = false;
-    tier = 0;
+    //tier = mnodeman.CountEnabled()+1;
     allowFreeTx = true;
     protocolVersion = PROTOCOL_VERSION;
     nLastDsq = 0;
@@ -402,7 +414,7 @@ CMasternodeBroadcast::CMasternodeBroadcast(CService newAddr, CTxIn newVin, CPubK
     cacheInputAge = 0;
     cacheInputAgeBlock = 0;
     unitTest = false;
-    tier = 0;
+    //tier = mnodeman.CountEnabled()+1;
     allowFreeTx = true;
     protocolVersion = protocolVersionIn;
     nLastDsq = 0;
@@ -424,7 +436,7 @@ CMasternodeBroadcast::CMasternodeBroadcast(const CMasternode& mn)
     cacheInputAgeBlock = mn.cacheInputAgeBlock;
     unitTest = mn.unitTest;
     allowFreeTx = mn.allowFreeTx;
-    tier = mn.tier;
+    //tier = mn.tier;
     protocolVersion = mn.protocolVersion;
     nLastDsq = mn.nLastDsq;
     nScanningErrorCount = mn.nScanningErrorCount;

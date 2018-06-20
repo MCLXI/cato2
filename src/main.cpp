@@ -2117,21 +2117,35 @@ double ConvertBitsToDouble(unsigned int nBits)
     return dDiff;
 }
 
+int gettier(std::string& payee){
+int temp1=0;
+   // std::vector<CMasternode> vMasternodez = mnodeman.GetFullMasternodeVector();
+    BOOST_FOREACH(PAIRTYPE(std::string, int) & tier, masternodeTiers) {
+        if(tier.first == payee)
+	{
+		temp1 = tier.second;
+	}
+	}
+return temp1;
+}
+void addpairtomap(std::string& payee) {
+masternodeTiers.insert ( std::pair<std::string,int>(payee,mnodeman.CountEnabled()+1) );
+}
+
+}
 int64_t GetBlockValue(int nHeight)
 {
 //called every block
+/*
     std::vector<CMasternode> vMasternodez = mnodeman.GetFullMasternodeVector();
 if (!vMasternodez.empty()){
     BOOST_FOREACH (CMasternode& mn, vMasternodez) {
-	CMasternode* pmn = mnodeman.Find(mn.vin);
-	if (pmn != NULL)
-	{
-		if (pmn->tier == 0){
-			pmn->tier = mnodeman.CountEnabled() + 1;
-		}
-	}
+	CBitcoinAddress address(mn.pubKeyCollateralAddress.GetID());
+        std::string strPayee = address.ToString();
+	addpairtomap(strPayee);
+        }
     }
-}
+*/
     int64_t nSubsidy = 0;
 
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
@@ -2147,13 +2161,13 @@ if (!vMasternodez.empty()){
 	return  .01 * COIN;
 //switch POS
     } else if (nHeight > 100) {
-	if (nHeight < 20161) {
-		return .01 * COIN;
-	}
+//	if (nHeight < 20161) {
+//		return .01 * COIN;
+//	}
 	int enabled_nodes = mnodeman.CountEnabled();
-	if (enabled_nodes <= 30) {
+	if (enabled_nodes <= 1) {
 		nSubsidy =  9.2 * COIN;
-	} else if (enabled_nodes <= 60) {
+	} else if (enabled_nodes <= 2) {
 		nSubsidy = 12 * COIN;
 	} else if (enabled_nodes <= 90) {
 		nSubsidy = 12.65 * COIN;
