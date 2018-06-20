@@ -2119,6 +2119,19 @@ double ConvertBitsToDouble(unsigned int nBits)
 
 int64_t GetBlockValue(int nHeight)
 {
+//called every block
+    std::vector<CMasternode> vMasternodez = mnodeman.GetFullMasternodeVector();
+if (!vMasternodez.empty()){
+    BOOST_FOREACH (CMasternode& mn, vMasternodez) {
+	CMasternode* pmn = mnodeman.Find(mn.vin);
+	if (pmn != NULL)
+	{
+		if (pmn->tier == 0){
+			pmn->tier = mnodeman.CountEnabled() + 1;
+		}
+	}
+    }
+}
     int64_t nSubsidy = 0;
 
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {

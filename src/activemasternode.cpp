@@ -68,13 +68,13 @@ void CActiveMasternode::ManageStatus()
         }
 
         if (Params().NetworkID() == CBaseChainParams::MAIN) {
-            if (service.GetPort() != 33888) {
-                notCapableReason = strprintf("Invalid port: %u - only 33888 is supported on mainnet.", service.GetPort());
+            if (service.GetPort() != 34888) {
+                notCapableReason = strprintf("Invalid port: %u - only 34888 is supported on mainnet.", service.GetPort());
                 LogPrintf("CActiveMasternode::ManageStatus() - not capable: %s\n", notCapableReason);
                 return;
             }
-        } else if (service.GetPort() == 33888) {
-            notCapableReason = strprintf("Invalid port: %u - 33888 is only supported on mainnet.", service.GetPort());
+        } else if (service.GetPort() == 34888) {
+            notCapableReason = strprintf("Invalid port: %u - 34888 is only supported on mainnet.", service.GetPort());
             LogPrintf("CActiveMasternode::ManageStatus() - not capable: %s\n", notCapableReason);
             return;
         }
@@ -267,13 +267,13 @@ bool CActiveMasternode::Register(std::string strService, std::string strKeyMaste
 
     CService service = CService(strService);
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
-        if (service.GetPort() != 33888) {
-            errorMessage = strprintf("Invalid port %u for masternode %s - only 33888 is supported on mainnet.", service.GetPort(), strService);
+        if (service.GetPort() != 34888) {
+            errorMessage = strprintf("Invalid port %u for masternode %s - only 34888 is supported on mainnet.", service.GetPort(), strService);
             LogPrintf("CActiveMasternode::Register() - %s\n", errorMessage);
             return false;
         }
-    } else if (service.GetPort() == 33888) {
-        errorMessage = strprintf("Invalid port %u for masternode %s - 33888 is only supported on mainnet.", service.GetPort(), strService);
+    } else if (service.GetPort() == 34888) {
+        errorMessage = strprintf("Invalid port %u for masternode %s - 34888 is only supported on mainnet.", service.GetPort(), strService);
         LogPrintf("CActiveMasternode::Register() - %s\n", errorMessage);
         return false;
     }
@@ -475,9 +475,9 @@ vector<COutput> CActiveMasternode::SelectCoinsMasternode()
     CAmount collat_required;
     collat_required = 1000 * COIN;
     int active_nodes = mnodeman.CountEnabled();
-    if (active_nodes <= 30) {
+    if (active_nodes <= 1) {
 	collat_required = 1000 * COIN;
-    } else if (active_nodes <= 60) {
+    } else if (active_nodes <= 2) {
 	collat_required = 1200 * COIN;
     } else if (active_nodes <= 90) {
 	collat_required = 1300 * COIN;
@@ -514,7 +514,26 @@ vector<COutput> CActiveMasternode::SelectCoinsMasternode()
     }
 
     BOOST_FOREACH (const COutput& out, vCoins) {
-        if (out.tx->vout[out.i].nValue == collat_required) { //exactly
+        if ((out.tx->vout[out.i].nValue == 1000 * COIN) ||
+               
+	(out.tx->vout[out.i].nValue == 1200 * COIN) ||
+              (out.tx->vout[out.i].nValue ==  1300 * COIN) ||
+               out.tx->vout[out.i].nValue == 1400 * COIN ||
+               out.tx->vout[out.i].nValue == 1425 * COIN ||
+               out.tx->vout[out.i].nValue == 1550 * COIN ||
+               out.tx->vout[out.i].nValue == 1675 * COIN ||
+               out.tx->vout[out.i].nValue == 1800 * COIN ||
+               out.tx->vout[out.i].nValue == 1925 * COIN ||
+               out.tx->vout[out.i].nValue == 2075 * COIN ||
+               out.tx->vout[out.i].nValue == 2275 * COIN ||
+               out.tx->vout[out.i].nValue == 2450 * COIN ||
+               out.tx->vout[out.i].nValue == 2675 * COIN ||
+               out.tx->vout[out.i].nValue == 2900 * COIN ||
+               out.tx->vout[out.i].nValue == 3100 * COIN ||
+               out.tx->vout[out.i].nValue == 3375 * COIN ||
+               out.tx->vout[out.i].nValue == 3675 * COIN ||
+               out.tx->vout[out.i].nValue == 4000 * COIN )
+ { //exactly
             filteredCoins.push_back(out);
         }
     }

@@ -1624,9 +1624,9 @@ void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed, const
     CAmount collat_required;
     collat_required = 1000 * COIN;
     int active_nodes = mnodeman.CountEnabled();
-    if (active_nodes <= 30) {
+    if (active_nodes <= 1) {
 	collat_required = 1000 * COIN;
-    } else if (active_nodes <= 60) {
+    } else if (active_nodes <= 2) {
 	collat_required = 1200 * COIN;
     } else if (active_nodes <= 90) {
 	collat_required = 1300 * COIN;
@@ -1666,13 +1666,64 @@ void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed, const
                 if (nCoinType == ONLY_DENOMINATED) {
                     found = IsDenominatedAmount(pcoin->vout[i].nValue);
                 } else if (nCoinType == ONLY_NOT10000IFMN) {
-                    found = !(fMasterNode && pcoin->vout[i].nValue == collat_required);
+                    found = !(fMasterNode && (pcoin->vout[i].nValue == 1000 * COIN ||
+                pcoin->vout[i].nValue == 1200 * COIN ||
+                pcoin->vout[i].nValue == 1300 * COIN ||
+                pcoin->vout[i].nValue == 1400 * COIN ||
+                pcoin->vout[i].nValue == 1425 * COIN ||
+                pcoin->vout[i].nValue == 1550 * COIN ||
+                pcoin->vout[i].nValue == 1675 * COIN ||
+                pcoin->vout[i].nValue == 1800 * COIN ||
+                pcoin->vout[i].nValue == 1925 * COIN ||
+                pcoin->vout[i].nValue == 2075 * COIN ||
+                pcoin->vout[i].nValue == 2275 * COIN ||
+                pcoin->vout[i].nValue == 2450 * COIN ||
+                pcoin->vout[i].nValue == 2675 * COIN ||
+                pcoin->vout[i].nValue == 2900 * COIN ||
+                pcoin->vout[i].nValue == 3100 * COIN ||
+                pcoin->vout[i].nValue == 3375 * COIN ||
+                pcoin->vout[i].nValue == 3675 * COIN ||
+                pcoin->vout[i].nValue == 4000 * COIN ));
                 } else if (nCoinType == ONLY_NONDENOMINATED_NOT10000IFMN) {
                     if (IsCollateralAmount(pcoin->vout[i].nValue)) continue; // do not use collateral amounts
                     found = !IsDenominatedAmount(pcoin->vout[i].nValue);
-                    if (found && fMasterNode) found = pcoin->vout[i].nValue != collat_required; // do not use Hot MN funds
+                    if (found && fMasterNode) found = !(pcoin->vout[i].nValue == 1200 * COIN ||
+                pcoin->vout[i].nValue == 1300 * COIN ||
+                pcoin->vout[i].nValue == 1400 * COIN ||
+                pcoin->vout[i].nValue == 1425 * COIN ||
+                pcoin->vout[i].nValue == 1550 * COIN ||
+                pcoin->vout[i].nValue == 1675 * COIN ||
+                pcoin->vout[i].nValue == 1800 * COIN ||
+                pcoin->vout[i].nValue == 1925 * COIN ||
+                pcoin->vout[i].nValue == 2075 * COIN ||
+                pcoin->vout[i].nValue == 2275 * COIN ||
+                pcoin->vout[i].nValue == 2450 * COIN ||
+                pcoin->vout[i].nValue == 2675 * COIN ||
+                pcoin->vout[i].nValue == 2900 * COIN ||
+                pcoin->vout[i].nValue == 3100 * COIN ||
+                pcoin->vout[i].nValue == 3375 * COIN ||
+                pcoin->vout[i].nValue == 3675 * COIN ||
+                pcoin->vout[i].nValue == 4000 * COIN ||
+		pcoin->vout[i].nValue == 1000 * COIN); // do not use Hot MN funds
                 } else if (nCoinType == ONLY_10000) {
-                    found = pcoin->vout[i].nValue == collat_required;
+                    found = (pcoin->vout[i].nValue == 1200 * COIN ||
+                pcoin->vout[i].nValue == 1300 * COIN ||
+                pcoin->vout[i].nValue == 1400 * COIN ||
+                pcoin->vout[i].nValue == 1425 * COIN ||
+                pcoin->vout[i].nValue == 1550 * COIN ||
+                pcoin->vout[i].nValue == 1675 * COIN ||
+                pcoin->vout[i].nValue == 1800 * COIN ||
+                pcoin->vout[i].nValue == 1925 * COIN ||
+                pcoin->vout[i].nValue == 2075 * COIN ||
+                pcoin->vout[i].nValue == 2275 * COIN ||
+                pcoin->vout[i].nValue == 2450 * COIN ||
+                pcoin->vout[i].nValue == 2675 * COIN ||
+                pcoin->vout[i].nValue == 2900 * COIN ||
+                pcoin->vout[i].nValue == 3100 * COIN ||
+                pcoin->vout[i].nValue == 3375 * COIN ||
+                pcoin->vout[i].nValue == 3675 * COIN ||
+                pcoin->vout[i].nValue == 4000 * COIN ||
+		pcoin->vout[i].nValue == 1000 * COIN);
                 } else {
                     found = true;
                 }

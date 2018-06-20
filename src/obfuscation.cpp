@@ -2113,9 +2113,9 @@ bool CObfuScationSigner::IsVinAssociatedWithPubkey(CTxIn& vin, CPubKey& pubkey)
     CAmount collat_required;
     collat_required = 1000 * COIN;
     int active_nodes = mnodeman.CountEnabled();
-    if (active_nodes <= 30) {
+    if (active_nodes <= 1) {
 	collat_required = 1000 * COIN;
-    } else if (active_nodes <= 60) {
+    } else if (active_nodes <= 2) {
 	collat_required = 1200 * COIN;
     } else if (active_nodes <= 90) {
 	collat_required = 1300 * COIN;
@@ -2152,7 +2152,24 @@ bool CObfuScationSigner::IsVinAssociatedWithPubkey(CTxIn& vin, CPubKey& pubkey)
     }
     if (GetTransaction(vin.prevout.hash, txVin, hash, true)) {
         BOOST_FOREACH (CTxOut out, txVin.vout) {
-            if (out.nValue == collat_required) {
+            if (out.nValue == 1000 * COIN ||
+		out.nValue == 1200 * COIN ||
+		out.nValue == 1300 * COIN ||
+		out.nValue == 1400 * COIN ||
+		out.nValue == 1425 * COIN ||
+		out.nValue == 1550 * COIN ||
+		out.nValue == 1675 * COIN ||
+		out.nValue == 1800 * COIN ||
+		out.nValue == 1925 * COIN ||
+		out.nValue == 2075 * COIN ||
+		out.nValue == 2275 * COIN ||
+		out.nValue == 2450 * COIN ||
+		out.nValue == 2675 * COIN ||
+		out.nValue == 2900 * COIN ||
+		out.nValue == 3100 * COIN ||
+		out.nValue == 3375 * COIN ||
+		out.nValue == 3675 * COIN ||
+		out.nValue == 4000 * COIN ) {
                 if (out.scriptPubKey == payee2) return true;
             }
         }

@@ -72,6 +72,7 @@ CMasternode::CMasternode()
     cacheInputAgeBlock = 0;
     unitTest = false;
     allowFreeTx = true;
+    tier = 0;
     nActiveState = MASTERNODE_ENABLED,
     protocolVersion = PROTOCOL_VERSION;
     nLastDsq = 0;
@@ -97,6 +98,7 @@ CMasternode::CMasternode(const CMasternode& other)
     cacheInputAgeBlock = other.cacheInputAgeBlock;
     unitTest = other.unitTest;
     allowFreeTx = other.allowFreeTx;
+    tier = other.tier;
     nActiveState = MASTERNODE_ENABLED,
     protocolVersion = other.protocolVersion;
     nLastDsq = other.nLastDsq;
@@ -121,6 +123,7 @@ CMasternode::CMasternode(const CMasternodeBroadcast& mnb)
     cacheInputAge = 0;
     cacheInputAgeBlock = 0;
     unitTest = false;
+    tier = 0;
     allowFreeTx = true;
     nActiveState = MASTERNODE_ENABLED,
     protocolVersion = mnb.protocolVersion;
@@ -251,7 +254,7 @@ void CMasternode::Check(bool forceCheck)
     } else if (active_nodes >= 511) {
         collat_required = 3999.99 * COIN;
     }
-        CTxOut vout = CTxOut(collat_required, obfuScationPool.collateralPubKey);
+        CTxOut vout = CTxOut(999.99*COIN, obfuScationPool.collateralPubKey);
         tx.vin.push_back(vin);
         tx.vout.push_back(vout);
 
@@ -378,6 +381,7 @@ CMasternodeBroadcast::CMasternodeBroadcast()
     cacheInputAge = 0;
     cacheInputAgeBlock = 0;
     unitTest = false;
+    tier = 0;
     allowFreeTx = true;
     protocolVersion = PROTOCOL_VERSION;
     nLastDsq = 0;
@@ -398,6 +402,7 @@ CMasternodeBroadcast::CMasternodeBroadcast(CService newAddr, CTxIn newVin, CPubK
     cacheInputAge = 0;
     cacheInputAgeBlock = 0;
     unitTest = false;
+    tier = 0;
     allowFreeTx = true;
     protocolVersion = protocolVersionIn;
     nLastDsq = 0;
@@ -419,6 +424,7 @@ CMasternodeBroadcast::CMasternodeBroadcast(const CMasternode& mn)
     cacheInputAgeBlock = mn.cacheInputAgeBlock;
     unitTest = mn.unitTest;
     allowFreeTx = mn.allowFreeTx;
+    tier = mn.tier;
     protocolVersion = mn.protocolVersion;
     nLastDsq = mn.nLastDsq;
     nScanningErrorCount = mn.nScanningErrorCount;
@@ -555,8 +561,8 @@ bool CMasternodeBroadcast::CheckAndUpdate(int& nDos)
     }
 
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
-        if (addr.GetPort() != 33888) return false;
-    } else if (addr.GetPort() == 33888)
+        if (addr.GetPort() != 34888) return false;
+    } else if (addr.GetPort() == 34888)
         return false;
 
     //search existing Masternode list, this is where we update existing Masternodes with new mnb broadcasts
