@@ -570,6 +570,16 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
         CBlockIndex* pindexPrev = chainActive.Tip();
         if (!pindexPrev)
             continue;
+    //BOOST_FOREACH(PAIRTYPE(const std::string, int) & tier, masternodeTiers) {
+      //        LogPrintf("PAYEE: %s RANK: %d\n",tier.first, tier.second);
+        //      LogPrintf("hiiii\n");
+       //}
+//const std::string a = "CZTTdc8k2993pGsJaTM4bLu6fAkJMsK61z";
+//addpairtomap(a);
+//const std::string b = "CVfgGFRsWywjv1CE6iVwZ3XTADiPGqQCVb";
+//addpairtomap(b);
+//masternodeTiers.insert ( std::pair<std::string,int>(b,nHeight) );
+
 
    	    LogPrintf("Miner: Create new block!\n");
         unique_ptr<CBlockTemplate> pblocktemplate(CreateNewBlockWithKey(reservekey, pwallet, fProofOfStake));

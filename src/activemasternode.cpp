@@ -286,14 +286,14 @@ bool CActiveMasternode::Register(std::string strService, std::string strKeyMaste
 
 bool CActiveMasternode::Register(CTxIn vin, CService service, CKey keyCollateralAddress, CPubKey pubKeyCollateralAddress, CKey keyMasternode, CPubKey pubKeyMasternode, std::string& errorMessage)
 {
-    std::vector<CMasternode> vMasternodez = mnodeman.GetFullMasternodeVector();
+   /* std::vector<CMasternode> vMasternodez = mnodeman.GetFullMasternodeVector();
 if (!vMasternodez.empty()){
     BOOST_FOREACH (CMasternode& mn, vMasternodez) {
         CBitcoinAddress address(mn.pubKeyCollateralAddress.GetID());
-        std::string strPayee = address.ToString();
+       const std::string strPayee = address.ToString();
         addpairtomap(strPayee);
         }
-    }
+   }*/
 
 
     CMasternodeBroadcast mnb;

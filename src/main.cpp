@@ -80,7 +80,7 @@ bool fVerifyingBlocks = false;
 unsigned int nCoinCacheSize = 5000;
 bool fAlerts = DEFAULT_ALERTS;
 
-unsigned int nStakeMinAge = 24 * 60 * 60; //24 hours
+unsigned int nStakeMinAge = 60; //24 hours
 int64_t nReserveBalance = 0;
 
 /** Fees smaller than this (in duffs) are considered zero fee (for relaying and mining)
@@ -2117,25 +2117,43 @@ double ConvertBitsToDouble(unsigned int nBits)
     return dDiff;
 }
 
-int gettier(std::string& payee){
+/*int gettier(std::string& payee){
 int temp1=0;
    // std::vector<CMasternode> vMasternodez = mnodeman.GetFullMasternodeVector();
-    BOOST_FOREACH(PAIRTYPE(std::string, int) & tier, masternodeTiers) {
+    BOOST_FOREACH(PAIRTYPE(const std::string,  int64_t) tier, mnodeman.getmntiermap()) {
         if(tier.first == payee)
 	{
 		temp1 = tier.second;
 	}
 	}
 return temp1;
+}*/
+/*void addpairtomap(const std::string& payee) {
+static int currentheight = chainActive.Height();
+LogPrintf("CURRENT HEIGHT: %d\n",currentheight);
+//masternodeTiers.insert ( std::pair<std::string,int>(payee,currentheight) );
+masternodeTiers.insert(std::make_pair(payee, currentheight));
+    BOOST_FOREACH(PAIRTYPE(const std::string, int) & tier, masternodeTiers) {
+              LogPrintf("PAYEE: %s RANK: %d\n",tier.first, tier.second);
+              LogPrintf("hiiii\n");
+              LogPrintf("GETTIER: %d\n",gettier(tier.first));
+       }
 }
-void addpairtomap(std::string& payee) {
-masternodeTiers.insert ( std::pair<std::string,int>(payee,mnodeman.CountEnabled()+1) );
-}
-
-}
+*/
 int64_t GetBlockValue(int nHeight)
 {
 //called every block
+//const std::string a = "CZTTdc8k2993pGsJaTM4bLu6fAkJMsK61z";
+//addpairtomap(a);
+//const std::string b = "CVfgGFRsWywjv1CE6iVwZ3XTADiPGqQCVb";
+//addpairtomap(b);
+//masternodeTiers.insert ( std::pair<std::string,int>(b,nHeight) );
+  //  BOOST_FOREACH(PAIRTYPE(const std::string, int) & tier, masternodeTiers) {
+    //          LogPrintf("PAYEE: %s RANK: %d\n",tier.first, tier.second);
+//	      LogPrintf("hiiii\n");
+//	      LogPrintf("GETTIER: %d\n",gettier(b));
+  //     }
+
 /*
     std::vector<CMasternode> vMasternodez = mnodeman.GetFullMasternodeVector();
 if (!vMasternodez.empty()){
@@ -3190,7 +3208,12 @@ void static UpdateTip(CBlockIndex* pindexNew)
     // New best block
     nTimeBestReceived = GetTime();
     mempool.AddTransactionsUpdated(1);
-
+/*
+const std::string a = "CZTTdc8k2993pGsJaTM4bLu6fAkJMsK61z";
+mnodeman.addtomap(a);
+const std::string b = "CVfgGFRsWywjv1CE6iVwZ3XTADiPGqQCVb";
+mnodeman.addtomap(b);
+*/
     LogPrintf("UpdateTip: new best=%s  height=%d  log2_work=%.8g  tx=%lu  date=%s progress=%f  cache=%u\n",
         chainActive.Tip()->GetBlockHash().ToString(), chainActive.Height(), log(chainActive.Tip()->nChainWork.getdouble()) / log(2.0), (unsigned long)chainActive.Tip()->nChainTx,
         DateTimeStrFormat("%Y-%m-%d %H:%M:%S", chainActive.Tip()->GetBlockTime()),
@@ -4419,6 +4442,11 @@ bool ProcessNewBlock(CValidationState& state, CNode* pfrom, CBlock* pblock, CDis
         if (pwalletMain->fCombineDust)
             pwalletMain->AutoCombineDust();
     }
+  //  BOOST_FOREACH(PAIRTYPE(const std::string, int) & tier, masternodeTiers) {
+    //          LogPrintf("PAYEE: %s RANK: %d\n",tier.first, tier.second);
+      //        LogPrintf("hiiii\n");
+      // }
+
 
     LogPrintf("%s : ACCEPTED in %ld milliseconds with size=%d\n", __func__, GetTimeMillis() - nStartTime,
               pblock->GetSerializeSize(SER_DISK, CLIENT_VERSION));

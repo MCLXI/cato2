@@ -56,7 +56,7 @@ class CValidationState;
 
 struct CBlockTemplate;
 struct CNodeStateStats;
-static std::map<std::string, int> masternodeTiers = map_list_of ("testing", 0);
+//std::map<std::string, int> masternodeTiers;
 /** Default for -blockmaxsize and -blockminsize, which control the range of sizes the mining code will create **/
 static const unsigned int DEFAULT_BLOCK_MAX_SIZE = 750000;
 static const unsigned int DEFAULT_BLOCK_MIN_SIZE = 0;
@@ -242,8 +242,8 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
 
 bool ActivateBestChain(CValidationState& state, CBlock* pblock = NULL, bool fAlreadyChecked = false);
 CAmount GetBlockValue(int nHeight);
-void addpairtomap(std::string& payee);
-int gettier(std::string& payee);
+void addpairtomap(const std::string& payee);
+int gettier(const std::string& payee);
 /** Create a new block index entry for a given block hash */
 CBlockIndex* InsertBlockIndex(uint256 hash);
 /** Abort with a message */

@@ -215,6 +215,41 @@ bool CMasternodeMan::Add(CMasternode& mn)
     return false;
 }
 
+/*int64_t CMasternodeMan::gettier(const std::string& payee){
+int64_t temp1=0;
+   // std::vector<CMasternode> vMasternodez = mnodeman.GetFullMasternodeVector();
+    BOOST_FOREACH(PAIRTYPE(const std::string,  int64_t) tier, mnodeman.getmntiermap()) {
+        if(tier.first == payee)
+        {
+                temp1 = tier.second;
+        }
+        }
+return temp1;
+}
+void CMasternodeMan::addtomap(const std::string& payee)
+{
+    LOCK(cs);
+int64_t currentheight = (int64_t)chainActive.Height();
+LogPrintf("CURRENT HEIGHT: %d\n",currentheight);
+//masternodeTiers.insert ( std::pair<std::string,int>(payee,currentheight) );
+masternodeTiers.insert(std::make_pair(payee, currentheight));
+    BOOST_FOREACH(PAIRTYPE(const std::string, int64_t)  tier, masternodeTiers) {
+              LogPrintf("PAYEE: %s RANK: %d\n",tier.first, tier.second);
+              LogPrintf("hiiii\n");
+              LogPrintf("GETTIER: %d\n",gettier(tier.first));
+       }
+
+    //CMasternode* pmn = Find(mn.vin);
+    //if (pmn == NULL) {
+      //  LogPrint("masternode", "CMasternodeMan: Adding new Masternode %s - %i now\n", mn.vin.prevout.hash.ToString(), size() + 1);
+       // vMasternodes.push_back(mn);
+        //return true;
+   // }
+
+    //return false;
+}
+*/
+
 void CMasternodeMan::AskForMN(CNode* pnode, CTxIn& vin)
 {
     std::map<COutPoint, int64_t>::iterator i = mWeAskedForMasternodeListEntry.find(vin.prevout);
@@ -501,9 +536,9 @@ CMasternode* CMasternodeMan::GetNextMasternodeInQueueForPayment(int nBlockHeight
 
         //make sure it has as many confirmations as there are masternodes
         if (mn.GetMasternodeInputAge() < nMnCount) continue;
-	if (mn.tier == 0){
-	 mn.UpdateTier(1);
-	}
+	//if (mn.tier == 0){
+	// mn.UpdateTier(1);
+//	}
 
         vecMasternodeLastPaid.push_back(make_pair(mn.SecondsSincePayment(), mn.vin));
     }

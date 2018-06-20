@@ -134,11 +134,6 @@
 	   </column>
            <column>
             <property name="text">
-             <string>Tier</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
              <string>Status</string>
             </property>
            </column>
