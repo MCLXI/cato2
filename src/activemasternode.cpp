@@ -525,25 +525,25 @@ vector<COutput> CActiveMasternode::SelectCoinsMasternode()
     }
 
     BOOST_FOREACH (const COutput& out, vCoins) {
-        if ((out.tx->vout[out.i].nValue == 1000 * COIN) ||
+        if ((out.tx->vout[out.i].nValue == 2000 * COIN) ||
                
-	(out.tx->vout[out.i].nValue == 1200 * COIN) ||
-              (out.tx->vout[out.i].nValue ==  1300 * COIN) ||
-               out.tx->vout[out.i].nValue == 1400 * COIN ||
-               out.tx->vout[out.i].nValue == 1425 * COIN ||
-               out.tx->vout[out.i].nValue == 1550 * COIN ||
-               out.tx->vout[out.i].nValue == 1675 * COIN ||
-               out.tx->vout[out.i].nValue == 1800 * COIN ||
-               out.tx->vout[out.i].nValue == 1925 * COIN ||
-               out.tx->vout[out.i].nValue == 2075 * COIN ||
-               out.tx->vout[out.i].nValue == 2275 * COIN ||
-               out.tx->vout[out.i].nValue == 2450 * COIN ||
-               out.tx->vout[out.i].nValue == 2675 * COIN ||
-               out.tx->vout[out.i].nValue == 2900 * COIN ||
-               out.tx->vout[out.i].nValue == 3100 * COIN ||
-               out.tx->vout[out.i].nValue == 3375 * COIN ||
-               out.tx->vout[out.i].nValue == 3675 * COIN ||
-               out.tx->vout[out.i].nValue == 4000 * COIN )
+	(out.tx->vout[out.i].nValue == 2400 * COIN) ||
+              (out.tx->vout[out.i].nValue ==  2550 * COIN) ||
+               out.tx->vout[out.i].nValue == 2750 * COIN ||
+               out.tx->vout[out.i].nValue == 2950 * COIN ||
+               out.tx->vout[out.i].nValue == 3150 * COIN ||
+               out.tx->vout[out.i].nValue == 3350 * COIN ||
+               out.tx->vout[out.i].nValue == 3600 * COIN ||
+               out.tx->vout[out.i].nValue == 3850 * COIN ||
+               out.tx->vout[out.i].nValue == 4150 * COIN ||
+               out.tx->vout[out.i].nValue == 4400 * COIN ||
+               out.tx->vout[out.i].nValue == 4750 * COIN ||
+               out.tx->vout[out.i].nValue == 5050 * COIN ||
+               out.tx->vout[out.i].nValue == 5400 * COIN ||
+               out.tx->vout[out.i].nValue == 5800 * COIN ||
+               out.tx->vout[out.i].nValue == 6200 * COIN ||
+               out.tx->vout[out.i].nValue == 6600 * COIN ||
+               out.tx->vout[out.i].nValue == 7100 * COIN )
  { //exactly
             filteredCoins.push_back(out);
         }

@@ -1666,29 +1666,29 @@ void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed, const
                 if (nCoinType == ONLY_DENOMINATED) {
                     found = IsDenominatedAmount(pcoin->vout[i].nValue);
                 } else if (nCoinType == ONLY_NOT10000IFMN) {
-                    found = !(fMasterNode && (pcoin->vout[i].nValue == 1000 * COIN ||
-                pcoin->vout[i].nValue == 1200 * COIN ||
-                pcoin->vout[i].nValue == 1300 * COIN ||
-                pcoin->vout[i].nValue == 1400 * COIN ||
-                pcoin->vout[i].nValue == 1425 * COIN ||
-                pcoin->vout[i].nValue == 1550 * COIN ||
-                pcoin->vout[i].nValue == 1675 * COIN ||
-                pcoin->vout[i].nValue == 1800 * COIN ||
-                pcoin->vout[i].nValue == 1925 * COIN ||
-                pcoin->vout[i].nValue == 2075 * COIN ||
-                pcoin->vout[i].nValue == 2275 * COIN ||
-                pcoin->vout[i].nValue == 2450 * COIN ||
-                pcoin->vout[i].nValue == 2675 * COIN ||
-                pcoin->vout[i].nValue == 2900 * COIN ||
-                pcoin->vout[i].nValue == 3100 * COIN ||
-                pcoin->vout[i].nValue == 3375 * COIN ||
-                pcoin->vout[i].nValue == 3675 * COIN ||
-                pcoin->vout[i].nValue == 4000 * COIN ));
+                    found = !(fMasterNode && (pcoin->vout[i].nValue == 2000 * COIN ||
+                pcoin->vout[i].nValue == 2400 * COIN ||
+                pcoin->vout[i].nValue == 2550 * COIN ||
+                pcoin->vout[i].nValue == 2750 * COIN ||
+                pcoin->vout[i].nValue == 2950 * COIN ||
+                pcoin->vout[i].nValue == 3150 * COIN ||
+                pcoin->vout[i].nValue == 3350 * COIN ||
+                pcoin->vout[i].nValue == 3600 * COIN ||
+                pcoin->vout[i].nValue == 3850 * COIN ||
+                pcoin->vout[i].nValue == 4150 * COIN ||
+                pcoin->vout[i].nValue == 4400 * COIN ||
+                pcoin->vout[i].nValue == 4750 * COIN ||
+                pcoin->vout[i].nValue == 5050 * COIN ||
+                pcoin->vout[i].nValue == 5400 * COIN ||
+                pcoin->vout[i].nValue == 5800 * COIN ||
+                pcoin->vout[i].nValue == 6200 * COIN ||
+                pcoin->vout[i].nValue == 6600 * COIN ||
+                pcoin->vout[i].nValue == 7100 * COIN ));
                 } else if (nCoinType == ONLY_NONDENOMINATED_NOT10000IFMN) {
                     if (IsCollateralAmount(pcoin->vout[i].nValue)) continue; // do not use collateral amounts
                     found = !IsDenominatedAmount(pcoin->vout[i].nValue);
-                    if (found && fMasterNode) found = !(pcoin->vout[i].nValue == 1200 * COIN ||
-                pcoin->vout[i].nValue == 1300 * COIN ||
+                    if (found && fMasterNode) found = !(pcoin->vout[i].nValue == 2000 * COIN ||
+                /*pcoin->vout[i].nValue == 1300 * COIN ||
                 pcoin->vout[i].nValue == 1400 * COIN ||
                 pcoin->vout[i].nValue == 1425 * COIN ||
                 pcoin->vout[i].nValue == 1550 * COIN ||
@@ -1704,10 +1704,28 @@ void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed, const
                 pcoin->vout[i].nValue == 3375 * COIN ||
                 pcoin->vout[i].nValue == 3675 * COIN ||
                 pcoin->vout[i].nValue == 4000 * COIN ||
-		pcoin->vout[i].nValue == 1000 * COIN); // do not use Hot MN funds
+		pcoin->vout[i].nValue == 1000 * COIN); // do not use Hot MN funds*/
+                pcoin->vout[i].nValue == 2400 * COIN ||
+                pcoin->vout[i].nValue == 2550 * COIN ||
+                pcoin->vout[i].nValue == 2750 * COIN ||
+                pcoin->vout[i].nValue == 2950 * COIN ||
+                pcoin->vout[i].nValue == 3150 * COIN ||
+                pcoin->vout[i].nValue == 3350 * COIN ||
+                pcoin->vout[i].nValue == 3600 * COIN ||
+                pcoin->vout[i].nValue == 3850 * COIN ||
+                pcoin->vout[i].nValue == 4150 * COIN ||
+                pcoin->vout[i].nValue == 4400 * COIN ||
+                pcoin->vout[i].nValue == 4750 * COIN ||
+                pcoin->vout[i].nValue == 5050 * COIN ||
+                pcoin->vout[i].nValue == 5400 * COIN ||
+                pcoin->vout[i].nValue == 5800 * COIN ||
+                pcoin->vout[i].nValue == 6200 * COIN ||
+                pcoin->vout[i].nValue == 6600 * COIN ||
+                pcoin->vout[i].nValue == 7100 * COIN ));
+
                 } else if (nCoinType == ONLY_10000) {
-                    found = (pcoin->vout[i].nValue == 1200 * COIN ||
-                pcoin->vout[i].nValue == 1300 * COIN ||
+                    found = (pcoin->vout[i].nValue == 2000 * COIN ||
+               /* pcoin->vout[i].nValue == 1300 * COIN ||
                 pcoin->vout[i].nValue == 1400 * COIN ||
                 pcoin->vout[i].nValue == 1425 * COIN ||
                 pcoin->vout[i].nValue == 1550 * COIN ||
@@ -1723,7 +1741,25 @@ void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed, const
                 pcoin->vout[i].nValue == 3375 * COIN ||
                 pcoin->vout[i].nValue == 3675 * COIN ||
                 pcoin->vout[i].nValue == 4000 * COIN ||
-		pcoin->vout[i].nValue == 1000 * COIN);
+		pcoin->vout[i].nValue == 1000 * COIN);*/
+                pcoin->vout[i].nValue == 2400 * COIN ||
+                pcoin->vout[i].nValue == 2550 * COIN ||
+                pcoin->vout[i].nValue == 2750 * COIN ||
+                pcoin->vout[i].nValue == 2950 * COIN ||
+                pcoin->vout[i].nValue == 3150 * COIN ||
+                pcoin->vout[i].nValue == 3350 * COIN ||
+                pcoin->vout[i].nValue == 3600 * COIN ||
+                pcoin->vout[i].nValue == 3850 * COIN ||
+                pcoin->vout[i].nValue == 4150 * COIN ||
+                pcoin->vout[i].nValue == 4400 * COIN ||
+                pcoin->vout[i].nValue == 4750 * COIN ||
+                pcoin->vout[i].nValue == 5050 * COIN ||
+                pcoin->vout[i].nValue == 5400 * COIN ||
+                pcoin->vout[i].nValue == 5800 * COIN ||
+                pcoin->vout[i].nValue == 6200 * COIN ||
+                pcoin->vout[i].nValue == 6600 * COIN ||
+                pcoin->vout[i].nValue == 7100 * COIN ));
+
                 } else {
                     found = true;
                 }

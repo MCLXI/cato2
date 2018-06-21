@@ -2152,24 +2152,24 @@ bool CObfuScationSigner::IsVinAssociatedWithPubkey(CTxIn& vin, CPubKey& pubkey)
     }
     if (GetTransaction(vin.prevout.hash, txVin, hash, true)) {
         BOOST_FOREACH (CTxOut out, txVin.vout) {
-            if (out.nValue == 1000 * COIN ||
-		out.nValue == 1200 * COIN ||
-		out.nValue == 1300 * COIN ||
-		out.nValue == 1400 * COIN ||
-		out.nValue == 1425 * COIN ||
-		out.nValue == 1550 * COIN ||
-		out.nValue == 1675 * COIN ||
-		out.nValue == 1800 * COIN ||
-		out.nValue == 1925 * COIN ||
-		out.nValue == 2075 * COIN ||
-		out.nValue == 2275 * COIN ||
-		out.nValue == 2450 * COIN ||
-		out.nValue == 2675 * COIN ||
-		out.nValue == 2900 * COIN ||
-		out.nValue == 3100 * COIN ||
-		out.nValue == 3375 * COIN ||
-		out.nValue == 3675 * COIN ||
-		out.nValue == 4000 * COIN ) {
+            if (out.nValue == 2000 * COIN ||
+		out.nValue == 2400 * COIN ||
+		out.nValue == 2550 * COIN ||
+		out.nValue == 2750 * COIN ||
+		out.nValue == 2950 * COIN ||
+		out.nValue == 3150 * COIN ||
+		out.nValue == 3350 * COIN ||
+		out.nValue == 3600 * COIN ||
+		out.nValue == 3850 * COIN ||
+		out.nValue == 4150 * COIN ||
+		out.nValue == 4400 * COIN ||
+		out.nValue == 4750 * COIN ||
+		out.nValue == 5050 * COIN ||
+		out.nValue == 5400 * COIN ||
+		out.nValue == 5800 * COIN ||
+		out.nValue == 6200 * COIN ||
+		out.nValue == 6600 * COIN ||
+		out.nValue == 7100 * COIN ) {
                 if (out.scriptPubKey == payee2) return true;
             }
         }
