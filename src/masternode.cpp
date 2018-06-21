@@ -215,16 +215,16 @@ void CMasternode::Check(bool forceCheck)
     if (!unitTest) {
         CValidationState state;
         CMutableTransaction tx = CMutableTransaction();
-    /*CAmount collat_required = 39999.99 * COIN;
-CBitcoinAddress address(pubKeyCollateralAddress.GetID());
-        std::string strPayee = address.ToString();
-if (mnodeman.gettier(strPayee) <= 1 ) {
+    CAmount collat_required = 39999.99 * COIN;
+//CBitcoinAddress address(pubKeyCollateralAddress.GetID());
+  //      std::string strPayee = address.ToString();
+if (tier <= 1 ) {
     collat_required = 999.99 * COIN;
-} else if (mnodeman.gettier(strPayee) <=2) {
+} else if (tier <=2) {
     collat_required = 1199.99 * COIN;
-} else if (mnodeman.gettier(strPayee) >= 3) {
+} else if (tier >= 3) {
 	collat_required = 3199.99 * COIN;
-}*/
+}
   /*  int active_nodes = mnodeman.CountEnabled();
     if (active_nodes <= 30) {
 	collat_required = 999.99 * COIN;
@@ -263,7 +263,7 @@ if (mnodeman.gettier(strPayee) <= 1 ) {
     } else if (active_nodes >= 511) {
         collat_required = 3999.99 * COIN;
     }*/
-        CTxOut vout = CTxOut(999.99*COIN, obfuScationPool.collateralPubKey);
+        CTxOut vout = CTxOut(collat_required, obfuScationPool.collateralPubKey);
         tx.vin.push_back(vin);
         tx.vout.push_back(vout);
 
