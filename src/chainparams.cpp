@@ -117,10 +117,10 @@ public:
         nTargetSpacing = 1 * 60; //Catocoin: 1 minute
         nMaturity = 3;
         nMasternodeCountDrift = 20;
-        nMaxMoneyOut = 48000000 * COIN; //500,000,000
+        nMaxMoneyOut = 25000000 * COIN; //500,000,000
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 500;
+        nLastPOWBlock = 250;
         nModifierUpdateBlock = 999999999;
         nZerocoinStartHeight = 101;
         nAccumulatorStartHeight = 1;
@@ -209,8 +209,8 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "03e58bce0ce54daaeeb2587a1c107e13d46fda185b11efe4bca80a092e54be863b";
-        strObfuscationPoolDummyAddress = "Jeax8jHDQ1s2kHVjysEoTQncVdUrNBuXtp";
+        strSporkKey = "032e4610e77f8bf5578f43f2d14c1777da2f76905ead9e34a94669fe66b769061c";
+        strObfuscationPoolDummyAddress = "CSP7JEhZbDp7fYJsJ1zG7Wd3fWbRqp7NMu";
         nStartMasternodePayments = 1403728576; //Wed, 25 Jun 2014 20:36:16 GMT
 
         /** Zerocoin */
@@ -275,9 +275,9 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("testnet.catocoin.io", "testnet.catocoin.io"));         // Single node address
-        vSeeds.push_back(CDNSSeedData("testnet1.catocoin.io", "testnet1.catocoin.io"));       // Single node address
-        vSeeds.push_back(CDNSSeedData("testnet2.catocoin.io", "testnet2.catocoin.io"));       // Single node address
+  //      vSeeds.push_back(CDNSSeedData("testnet.catocoin.io", "testnet.catocoin.io"));         // Single node address
+//        vSeeds.push_back(CDNSSeedData("testnet1.catocoin.io", "testnet1.catocoin.io"));       // Single node address
+    //    vSeeds.push_back(CDNSSeedData("testnet2.catocoin.io", "testnet2.catocoin.io"));       // Single node address
 
 
 		base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 65);

@@ -73,7 +73,7 @@ CMasternode::CMasternode()
     cacheInputAgeBlock = 0;
     unitTest = false;
     allowFreeTx = true;
-    tier = mnodeman.CountEnabled()+1;
+    tier = 0;
     nActiveState = MASTERNODE_ENABLED,
     protocolVersion = PROTOCOL_VERSION;
     nLastDsq = 0;
@@ -124,7 +124,7 @@ CMasternode::CMasternode(const CMasternodeBroadcast& mnb)
     cacheInputAge = 0;
     cacheInputAgeBlock = 0;
     unitTest = false;
-    tier = mnodeman.CountEnabled()+1;
+    tier = 0;
     allowFreeTx = true;
     nActiveState = MASTERNODE_ENABLED,
     protocolVersion = mnb.protocolVersion;
@@ -213,18 +213,71 @@ void CMasternode::Check(bool forceCheck)
     }
 
     if (!unitTest) {
+//runs every time you make a new MN
+if (tier == 0){
+UpdateTier(mnodeman.CountEnabled()+1);
+}
         CValidationState state;
         CMutableTransaction tx = CMutableTransaction();
     CAmount collat_required = 39999.99 * COIN;
 //CBitcoinAddress address(pubKeyCollateralAddress.GetID());
   //      std::string strPayee = address.ToString();
-if (tier <= 1 ) {
-    collat_required = 999.99 * COIN;
-} else if (tier <=2) {
-    collat_required = 1199.99 * COIN;
-} else if (tier >= 3) {
-	collat_required = 3199.99 * COIN;
+//if (tier <= 0)
+//{
+//collat_required = 59999 * COIN;
+ if (tier <= 2 ) {
+    collat_required = 1999.99 * COIN;
+} else if (tier <= 3) {
+    collat_required = 2099.99 * COIN;
+} else if (tier <= 61) {
+	collat_required = 2399.99 * COIN;
+} else if (tier <= 91) {
+        collat_required = 2549.99 * COIN;
+} else if (tier <= 121) {
+        collat_required = 2749.99 * COIN;
+} else if (tier <= 151) {
+        collat_required = 2949.99 * COIN;
+} else if (tier <= 181) {
+        collat_required =  3149.99* COIN;
+
+} else if (tier <= 211) {
+        collat_required = 3349.99 * COIN;
+
+} else if (tier <= 241) {
+        collat_required = 3599.99 * COIN;
+} else if (tier <= 271) {
+        collat_required = 3849.99 * COIN;
+} else if (tier <= 301) {
+        collat_required = 4149.99 * COIN;
+} else if (tier <= 331) {
+        collat_required = 4399.99 * COIN;
+} else if (tier <= 361) {
+        collat_required = 4749.99 * COIN;
+} else if (tier <= 391) {
+        collat_required = 5049.99 * COIN;
+
+} else if (tier <= 421) {
+        collat_required = 5399.99 * COIN;
+
+} else if (tier <= 451) {
+        collat_required = 5799.99 * COIN;
+} else if (tier <= 481) {
+        collat_required = 6199.99 * COIN;
+
+} else if (tier <= 511) {
+        collat_required = 6599.99 * COIN;
+} else if (tier > 511) {
+        collat_required = 7099.99 * COIN;
+
 }
+
+
+
+
+
+
+
+
   /*  int active_nodes = mnodeman.CountEnabled();
     if (active_nodes <= 30) {
 	collat_required = 999.99 * COIN;
@@ -393,7 +446,7 @@ CMasternodeBroadcast::CMasternodeBroadcast()
     cacheInputAge = 0;
     cacheInputAgeBlock = 0;
     unitTest = false;
-    tier = mnodeman.CountEnabled()+1;
+    tier = 0;
     allowFreeTx = true;
     protocolVersion = PROTOCOL_VERSION;
     nLastDsq = 0;
@@ -414,7 +467,7 @@ CMasternodeBroadcast::CMasternodeBroadcast(CService newAddr, CTxIn newVin, CPubK
     cacheInputAge = 0;
     cacheInputAgeBlock = 0;
     unitTest = false;
-    tier = mnodeman.CountEnabled()+1;
+    tier = 0;
     allowFreeTx = true;
     protocolVersion = protocolVersionIn;
     nLastDsq = 0;

@@ -28,7 +28,7 @@
  * Todo: update this when changing our copyright comments in the source
  */
 #define COPYRIGHT_YEAR 2017
-
+#define COPYRIGHT_YEAR2 2018
 #endif //HAVE_CONFIG_H
 
 /**
@@ -39,7 +39,7 @@
 #define DO_STRINGIZE(X) #X
 
 //! Copyright string used in Windows .rc files
-#define COPYRIGHT_STR "2009-" STRINGIZE(COPYRIGHT_YEAR) " The Bitcoin Core Developers, 2014-" STRINGIZE(COPYRIGHT_YEAR) " The Dash Core Developers, 2015-" STRINGIZE(COPYRIGHT_YEAR) " The PIVX Core Developers, 2017-" STRINGIZE(COPYRIGHT_YEAR) " The Catocoin Core Developers"
+#define COPYRIGHT_STR "2009-" STRINGIZE(COPYRIGHT_YEAR) " The Bitcoin Core Developers, 2014-" STRINGIZE(COPYRIGHT_YEAR) " The Dash Core Developers, 2015-" STRINGIZE(COPYRIGHT_YEAR) " The PIVX Core Developers, 2018-" STRINGIZE(COPYRIGHT_YEAR2) " The Awesome Catocoin Core Developers"
 
 /**
  * catocoind-res.rc includes this file, but it cannot cope with real c++ code.

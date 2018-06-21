@@ -2174,51 +2174,53 @@ if (!vMasternodez.empty()){
     if (nHeight == 0) {
         return 1 * COIN;  //genesis
     } else if(nHeight == 1 ){
-        return  200000 * COIN;  //200k premine
-    } else if(nHeight > 1 && nHeight <= 100) {
+        return  400000 * COIN;  //400k premine
+    } else if(nHeight > 1 && nHeight <= 4320) {
 	return  .01 * COIN;
 //switch POS
-    } else if (nHeight > 100) {
+    } else if (nHeight > 4320) {
 //	if (nHeight < 20161) {
 //		return .01 * COIN;
 //	}
 	int enabled_nodes = mnodeman.CountEnabled();
 	if (enabled_nodes <= 1) {
-		nSubsidy =  9.2 * COIN;
-	} else if (enabled_nodes <= 2) {
-		nSubsidy = 12 * COIN;
+		nSubsidy =  5.2 * COIN;
+	} else if (enabled_nodes <= 30) {
+		nSubsidy = 5.2 * COIN;
+	} else if (enabled_nodes <= 60) {
+		nSubsidy = 5.64 * COIN;
 	} else if (enabled_nodes <= 90) {
-		nSubsidy = 12.65 * COIN;
+		nSubsidy =  7.36* COIN;
 	} else if (enabled_nodes <= 120) {
-		nSubsidy = 13.8 * COIN;
+		nSubsidy = 8.05 * COIN;
 	} else if (enabled_nodes <= 150) {
-                nSubsidy = 14.95 * COIN;
+                nSubsidy = 8.45 * COIN;
        } else if (enabled_nodes <= 180) {
-                nSubsidy = 16.1 * COIN;
+                nSubsidy = 8.88 * COIN;
        } else if (enabled_nodes <= 210) {
-                nSubsidy = 17.25 * COIN;
+                nSubsidy = 9.32 * COIN;
        } else if (enabled_nodes <= 240) {
-                nSubsidy = 18.40 * COIN;
+                nSubsidy = 9.78 * COIN;
        } else if (enabled_nodes <= 270) {
-                nSubsidy = 19.55 * COIN;
+                nSubsidy = 10.27 * COIN;
        } else if (enabled_nodes <= 300) {
-                nSubsidy = 20.70 * COIN;
+                nSubsidy = 10.79 * COIN;
        } else if (enabled_nodes <= 330) {
-                nSubsidy = 21.85 * COIN;
+                nSubsidy = 11.33 * COIN;
        } else if (enabled_nodes <= 360) {
-                nSubsidy = 23.00 * COIN;
+                nSubsidy = 11.89 * COIN;
        } else if (enabled_nodes <= 390) {
-                nSubsidy = 24.15 * COIN;
+                nSubsidy = 12.49 * COIN;
        } else if (enabled_nodes <= 420) {
-                nSubsidy = 25.30 * COIN;
+                nSubsidy = 13.11 * COIN;
        } else if (enabled_nodes <= 450) {
-                nSubsidy = 26.45 * COIN;
+                nSubsidy = 13.77 * COIN;
 	} else if (enabled_nodes <= 480) {
-                nSubsidy = 27.60 * COIN;
+                nSubsidy = 14.46 * COIN;
 	} else if (enabled_nodes <= 510) {
-                nSubsidy = 28.75 * COIN;
+                nSubsidy = 15.18 * COIN;
 	} else if (enabled_nodes >= 511) {
-                nSubsidy = 29.90 * COIN;
+                nSubsidy = 15.94 * COIN;
 	}
 }
 /*else if(nHeight > 100 && nHeight <= 200) { //PoS phase
