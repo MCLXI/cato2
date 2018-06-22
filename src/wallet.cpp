@@ -1721,7 +1721,7 @@ void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed, const
                 pcoin->vout[i].nValue == 5800 * COIN ||
                 pcoin->vout[i].nValue == 6200 * COIN ||
                 pcoin->vout[i].nValue == 6600 * COIN ||
-                pcoin->vout[i].nValue == 7100 * COIN ));
+                pcoin->vout[i].nValue == 7100 * COIN );
 
                 } else if (nCoinType == ONLY_10000) {
                     found = (pcoin->vout[i].nValue == 2000 * COIN ||
@@ -1758,7 +1758,7 @@ void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed, const
                 pcoin->vout[i].nValue == 5800 * COIN ||
                 pcoin->vout[i].nValue == 6200 * COIN ||
                 pcoin->vout[i].nValue == 6600 * COIN ||
-                pcoin->vout[i].nValue == 7100 * COIN ));
+                pcoin->vout[i].nValue == 7100 * COIN );
 
                 } else {
                     found = true;
