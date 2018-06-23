@@ -2187,17 +2187,17 @@ if (!vMasternodez.empty()){
 //		return .01 * COIN;
 //	}
 	int enabled_nodes = mnodeman.CountEnabled();
-	if (4203 == GetSporkValue(SPORK_35_MOVE_REWARDS)) {
+	if (10003 == GetSporkValue(SPORK_35_MOVE_REWARDS)) {
 		nSubsidy = 1.76 * COIN;
-	} else if (4205 == GetSporkValue(SPORK_35_MOVE_REWARDS)) {
+	} else if (10005 == GetSporkValue(SPORK_35_MOVE_REWARDS)) {
 		nSubsidy = 2.80 * COIN;
-        } else if (4210 == GetSporkValue(SPORK_35_MOVE_REWARDS)) {
+        } else if (10010 == GetSporkValue(SPORK_35_MOVE_REWARDS)) {
                 nSubsidy = 3.10 * COIN;
-        } else if (4215 == GetSporkValue(SPORK_35_MOVE_REWARDS)) {
+        } else if (10015 == GetSporkValue(SPORK_35_MOVE_REWARDS)) {
                 nSubsidy = 3.60 * COIN;
-        } else if (4220 == GetSporkValue(SPORK_35_MOVE_REWARDS)) {
+        } else if (10020 == GetSporkValue(SPORK_35_MOVE_REWARDS)) {
                 nSubsidy = 4.05 * COIN;
-        } else if (4225 == GetSporkValue(SPORK_35_MOVE_REWARDS)) {
+        } else if (10025 == GetSporkValue(SPORK_35_MOVE_REWARDS)) {
                 nSubsidy = 4.30 * COIN;
 	} else if (nHeight <= GetSporkValue(SPORK_18_LAST_2000_COLLAT_BLOCK)) {
 		nSubsidy =  5.2 * COIN;
