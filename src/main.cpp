@@ -2175,21 +2175,22 @@ if (!vMasternodez.empty()){
         return 1 * COIN;  //genesis
     } else if(nHeight == 1 ){
         return  400000 * COIN;  //400k premine
-    } else if(nHeight > 1 && nHeight <= 4320) {
+    } else if(nHeight > 1 && nHeight <= 20) {
 	return  .01 * COIN;
 //switch POS
-    } else if (nHeight > 4320) {
+    } else if (nHeight > 21) {
 //	if (nHeight < 20161) {
 //		return .01 * COIN;
 //	}
 	int enabled_nodes = mnodeman.CountEnabled();
-	if (enabled_nodes <= 1) {
+	if (nHeight <= GetSporkValue(SPORK_18_LAST_2000_COLLAT_BLOCK)) {
 		nSubsidy =  5.2 * COIN;
-	} else if (enabled_nodes <= 30) {
+//	} else if (enabled_nodes <= 30) {
+       } else if (nHeight <= GetSporkValue(SPORK_19_LAST_2400_COLLAT_BLOCK)) {
 		nSubsidy = 5.2 * COIN;
-	} else if (enabled_nodes <= 60) {
+	} else if (nHeight <= GetSporkValue(SPORK_20_LAST_2550_COLLAT_BLOCK)) {
 		nSubsidy = 5.64 * COIN;
-	} else if (enabled_nodes <= 90) {
+	} else if (enabled_nodes <= GetSporkValue(SPORK_21_LAST_2750_COLLAT_BLOCK)) {
 		nSubsidy =  7.36* COIN;
 	} else if (enabled_nodes <= 120) {
 		nSubsidy = 8.05 * COIN;

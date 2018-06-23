@@ -134,7 +134,7 @@
 	   </column>
 	   <column>
             <property name="text">
-             <string>Level</string>
+             <string>NEW_MN_COLLAT_REQ</string>
             </property>
            </column>
            <column>
