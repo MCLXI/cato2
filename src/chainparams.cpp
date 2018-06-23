@@ -54,10 +54,10 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("00000be6a15579cbfe2eb7ee63d25f74d29e142052b5fd505f00021f55c80d0a"));
+    (0, uint256("0000bcc6946d573a781b90095cc54e2523256f4c9422b9385894cf04108f5012"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1529606506, // * UNIX timestamp of last checkpoint block
+    1529607709, // * UNIX timestamp of last checkpoint block
     0,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
@@ -106,7 +106,8 @@ public:
         pchMessageStart[3] = 0x67;
         vAlertPubKey = ParseHex("04c32c8ab64b43228550115a862847deb294b776a71d6395e9c49477d13eac413f022e40462770dbc665f8a32aeec2a5d87839239f9a0b91a85269f90e79ab0ccc");
         nDefaultPort = 34888;
-        bnProofOfWorkLimit = ~uint256(0) >> 1; // Catocoin starting difficulty is 1 / 2^12
+        //bnProofOfWorkLimit = ~uint256(0) >> 1; // Catocoin starting difficulty is 1 / 2^12
+        bnProofOfWorkLimit = ~uint256(0) >> 20; // Trittium starting difficulty is 1 / 2^20
         nSubsidyHalvingInterval = 2100000000;
         nMaxReorganizationDepth = 100;
         nEnforceBlockUpgradeMajority = 750;
@@ -115,14 +116,14 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1* 60; // Catocoin: 1 day
         nTargetSpacing = 1 * 60; //Catocoin: 1 minute
-        nMaturity = 3;
+        nMaturity = 30;
         nMasternodeCountDrift = 20;
         nMaxMoneyOut = 25000000 * COIN; //500,000,000
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 400;
+        nLastPOWBlock = 200;
         nModifierUpdateBlock = 999999999;
-        nZerocoinStartHeight = 101;
+        nZerocoinStartHeight = 201;
         nAccumulatorStartHeight = 1;
         nZerocoinStartTime = 1527811200; // Friday, June 1, 2018 12:00:00 AM - GMT
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
@@ -151,9 +152,9 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1529606506;  // Thursday, Saturday, May 5, 2018 8:17:00 PM GNT
+        genesis.nTime = 1529607709;  // Thursday, Saturday, May 5, 2018 8:17:00 PM GNT
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 84516;
+        genesis.nNonce = 94022;
 	/*
         printf("Generating genesis block...\n");
 
@@ -178,9 +179,9 @@ public:
 		
         printf("genesis: %s\n",hashGenesisBlock.GetHex().c_str());
         printf("merklehash: %s\n",genesis.hashMerkleRoot.ToString().c_str());
-	*/		
+			*/
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("00000be6a15579cbfe2eb7ee63d25f74d29e142052b5fd505f00021f55c80d0a"));
+        assert(hashGenesisBlock == uint256("0000bcc6946d573a781b90095cc54e2523256f4c9422b9385894cf04108f5012"));
         assert(genesis.hashMerkleRoot == uint256("c78c488441f21e66e7dbecd53a3675231cfdd138573e22164bef0d4235d33902"));
 
      //  vSeeds.push_back(CDNSSeedData("204.48.31.214", "204.48.31.214"));

@@ -80,7 +80,7 @@ bool fVerifyingBlocks = false;
 unsigned int nCoinCacheSize = 5000;
 bool fAlerts = DEFAULT_ALERTS;
 
-unsigned int nStakeMinAge = 60; //24 hours
+unsigned int nStakeMinAge = 60*60*6; //6 hours
 int64_t nReserveBalance = 0;
 
 /** Fees smaller than this (in duffs) are considered zero fee (for relaying and mining)
@@ -2175,53 +2175,67 @@ if (!vMasternodez.empty()){
         return 1 * COIN;  //genesis
     } else if(nHeight == 1 ){
         return  400000 * COIN;  //400k premine
-    } else if(nHeight > 1 && nHeight <= 20) {
+    } else if(nHeight > 1 && nHeight <= GetSporkValue(SPORK_35_MOVE_REWARDS)) {
 	return  .01 * COIN;
 //switch POS
-    } else if (nHeight > 21) {
+    } else if (nHeight > GetSporkValue(SPORK_35_MOVE_REWARDS)) {
 //	if (nHeight < 20161) {
 //		return .01 * COIN;
 //	}
 	int enabled_nodes = mnodeman.CountEnabled();
-	if (nHeight <= GetSporkValue(SPORK_18_LAST_2000_COLLAT_BLOCK)) {
+	if (4203 == GetSporkValue(SPORK_35_MOVE_REWARDS)) {
+		nSubsidy = 1.76 * COIN;
+	} else if (4205 == GetSporkValue(SPORK_35_MOVE_REWARDS)) {
+		nSubsidy = 2.80 * COIN;
+        } else if (4210 == GetSporkValue(SPORK_35_MOVE_REWARDS)) {
+                nSubsidy = 3.10 * COIN;
+        } else if (4215 == GetSporkValue(SPORK_35_MOVE_REWARDS)) {
+                nSubsidy = 3.60 * COIN;
+        } else if (4220 == GetSporkValue(SPORK_35_MOVE_REWARDS)) {
+                nSubsidy = 4.05 * COIN;
+        } else if (4225 == GetSporkValue(SPORK_35_MOVE_REWARDS)) {
+                nSubsidy = 4.30 * COIN;
+	} else if (nHeight <= GetSporkValue(SPORK_18_LAST_2000_COLLAT_BLOCK)) {
 		nSubsidy =  5.2 * COIN;
 //	} else if (enabled_nodes <= 30) {
        } else if (nHeight <= GetSporkValue(SPORK_19_LAST_2400_COLLAT_BLOCK)) {
 		nSubsidy = 5.2 * COIN;
 	} else if (nHeight <= GetSporkValue(SPORK_20_LAST_2550_COLLAT_BLOCK)) {
 		nSubsidy = 5.64 * COIN;
-	} else if (enabled_nodes <= GetSporkValue(SPORK_21_LAST_2750_COLLAT_BLOCK)) {
+	} else if (nHeight <= GetSporkValue(SPORK_21_LAST_2750_COLLAT_BLOCK)) {
 		nSubsidy =  7.36* COIN;
-	} else if (enabled_nodes <= 120) {
+	} else if (nHeight <= GetSporkValue(SPORK_22_LAST_2950_COLLAT_BLOCK)) {
 		nSubsidy = 8.05 * COIN;
-	} else if (enabled_nodes <= 150) {
+	} else if (nHeight <= GetSporkValue(SPORK_23_LAST_3150_COLLAT_BLOCK)) {
                 nSubsidy = 8.45 * COIN;
-       } else if (enabled_nodes <= 180) {
+       } else if (nHeight <= GetSporkValue(SPORK_24_LAST_3350_COLLAT_BLOCK)) {
                 nSubsidy = 8.88 * COIN;
-       } else if (enabled_nodes <= 210) {
+       } else if (nHeight <= GetSporkValue(SPORK_25_LAST_3600_COLLAT_BLOCK)) {
                 nSubsidy = 9.32 * COIN;
-       } else if (enabled_nodes <= 240) {
+       } else if (nHeight <= GetSporkValue(SPORK_26_LAST_3850_COLLAT_BLOCK)) {
                 nSubsidy = 9.78 * COIN;
-       } else if (enabled_nodes <= 270) {
+       } else if (nHeight <= GetSporkValue(SPORK_27_LAST_4150_COLLAT_BLOCK)) {
                 nSubsidy = 10.27 * COIN;
-       } else if (enabled_nodes <= 300) {
+       } else if (nHeight <= GetSporkValue(SPORK_28_LAST_4400_COLLAT_BLOCK)) {
                 nSubsidy = 10.79 * COIN;
-       } else if (enabled_nodes <= 330) {
+       } else if (nHeight <= GetSporkValue(SPORK_29_LAST_4750_COLLAT_BLOCK)) {
                 nSubsidy = 11.33 * COIN;
-       } else if (enabled_nodes <= 360) {
+       } else if (nHeight <= GetSporkValue(SPORK_30_LAST_5050_COLLAT_BLOCK)) {
                 nSubsidy = 11.89 * COIN;
-       } else if (enabled_nodes <= 390) {
+       } else if (nHeight <= GetSporkValue(SPORK_31_LAST_5400_COLLAT_BLOCK)) {
                 nSubsidy = 12.49 * COIN;
-       } else if (enabled_nodes <= 420) {
+       } else if (nHeight <= GetSporkValue(SPORK_32_LAST_5800_COLLAT_BLOCK)) {
                 nSubsidy = 13.11 * COIN;
-       } else if (enabled_nodes <= 450) {
+       } else if (nHeight <= GetSporkValue(SPORK_33_LAST_6200_COLLAT_BLOCK)) {
                 nSubsidy = 13.77 * COIN;
-	} else if (enabled_nodes <= 480) {
+	} else if (nHeight <= GetSporkValue(SPORK_34_LAST_6600_COLLAT_BLOCK)) {
                 nSubsidy = 14.46 * COIN;
-	} else if (enabled_nodes <= 510) {
+	} else if (6600 == GetSporkValue(SPORK_17_CURRENT_MN_COLLATERAL)) {
                 nSubsidy = 15.18 * COIN;
-	} else if (enabled_nodes >= 511) {
+	} else if (7100 == GetSporkValue(SPORK_17_CURRENT_MN_COLLATERAL)) {
                 nSubsidy = 15.94 * COIN;
+	} else {
+	nSubsidy = 1.76 * COIN;
 	}
 }
 /*else if(nHeight > 100 && nHeight <= 200) { //PoS phase
