@@ -2176,7 +2176,11 @@ if (!vMasternodez.empty()){
     } else if(nHeight == 1 ){
         return  400000 * COIN;  //400k premine
     } else if(nHeight > 1 && nHeight <= GetSporkValue(SPORK_35_MOVE_REWARDS)) {
+	if (nHeight < 302) {
 	return  .01 * COIN;
+	} else {
+	return .001 * COIN;
+	}
 //switch POS
     } else if (nHeight > GetSporkValue(SPORK_35_MOVE_REWARDS)) {
 //	if (nHeight < 20161) {
