@@ -543,6 +543,7 @@ vector<COutput> CActiveMasternode::SelectCoinsMasternode()
                out.tx->vout[out.i].nValue == 5800 * COIN ||
                out.tx->vout[out.i].nValue == 6200 * COIN ||
                out.tx->vout[out.i].nValue == 6600 * COIN ||
+               out.tx->vout[out.i].nValue == 2200 * COIN ||
                out.tx->vout[out.i].nValue == 7100 * COIN )
  { //exactly
             filteredCoins.push_back(out);

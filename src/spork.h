@@ -27,7 +27,7 @@ using namespace boost;
     Sporks 11,12, and 16 to be removed with 1st zerocoin release
 */
 #define SPORK_START 10001
-#define SPORK_END 10034
+#define SPORK_END 10035
 
 #define SPORK_2_SWIFTTX 10001
 #define SPORK_3_SWIFTTX_BLOCK_FILTERING 10002
@@ -61,6 +61,7 @@ using namespace boost;
 #define SPORK_33_LAST_6200_COLLAT_BLOCK 10032
 #define SPORK_34_LAST_6600_COLLAT_BLOCK 10033
 #define SPORK_35_MOVE_REWARDS 10034
+#define SPORK_36_LAST_2200_COLLAT_BLOCK 10035
 
 
 #define SPORK_2_SWIFTTX_DEFAULT 978307200                         //2001-1-1
@@ -94,6 +95,7 @@ using namespace boost;
 #define SPORK_33_LAST_6200_COLLAT_BLOCK_DEFAULT 959999
 #define SPORK_34_LAST_6600_COLLAT_BLOCK_DEFAULT 959999
 #define SPORK_35_MOVE_REWARDS_DEFAULT 4200
+#define SPORK_36_LAST_2200_COLLAT_BLOCK_DEFAULT 959999
 
 class CSporkMessage;
 class CSporkManager;

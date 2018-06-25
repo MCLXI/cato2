@@ -1683,6 +1683,7 @@ void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed, const
                 pcoin->vout[i].nValue == 5800 * COIN ||
                 pcoin->vout[i].nValue == 6200 * COIN ||
                 pcoin->vout[i].nValue == 6600 * COIN ||
+                pcoin->vout[i].nValue == 2200 * COIN ||
                 pcoin->vout[i].nValue == 7100 * COIN ));
                 } else if (nCoinType == ONLY_NONDENOMINATED_NOT10000IFMN) {
                     if (IsCollateralAmount(pcoin->vout[i].nValue)) continue; // do not use collateral amounts
@@ -1721,6 +1722,7 @@ void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed, const
                 pcoin->vout[i].nValue == 5800 * COIN ||
                 pcoin->vout[i].nValue == 6200 * COIN ||
                 pcoin->vout[i].nValue == 6600 * COIN ||
+                pcoin->vout[i].nValue == 2200 * COIN ||
                 pcoin->vout[i].nValue == 7100 * COIN );
 
                 } else if (nCoinType == ONLY_10000) {
@@ -1758,6 +1760,7 @@ void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed, const
                 pcoin->vout[i].nValue == 5800 * COIN ||
                 pcoin->vout[i].nValue == 6200 * COIN ||
                 pcoin->vout[i].nValue == 6600 * COIN ||
+                pcoin->vout[i].nValue == 2200 * COIN ||
                 pcoin->vout[i].nValue == 7100 * COIN );
 
                 } else {

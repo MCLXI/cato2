@@ -2055,6 +2055,7 @@ Value getstakesplitthreshold(const Array& params, bool fHelp)
             HelpExampleCli("getstakesplitthreshold", "") + HelpExampleRpc("getstakesplitthreshold", ""));
 
     return int(pwalletMain->nStakeSplitThreshold);
+     //return int(mnodeman.CountEnabled());
 }
 
 Value autocombinerewards(const Array& params, bool fHelp)

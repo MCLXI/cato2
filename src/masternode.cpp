@@ -328,6 +328,8 @@ int txnheight = iter->second->nHeight;
 //block height of txn
 if (txnheight <= GetSporkValue(SPORK_18_LAST_2000_COLLAT_BLOCK)){
 collat_required = 1999.99 * COIN;
+} else if (txnheight <= GetSporkValue(SPORK_36_LAST_2200_COLLAT_BLOCK)) {
+collat_required = 2199.99 * COIN;
 } else if (txnheight <= GetSporkValue(SPORK_19_LAST_2400_COLLAT_BLOCK)){
 collat_required = 2399.99 * COIN;
 } else if (txnheight <= GetSporkValue(SPORK_20_LAST_2550_COLLAT_BLOCK)){

@@ -148,6 +148,8 @@ int64_t GetSporkValue(int nSporkID)
 	if (nSporkID == SPORK_33_LAST_6200_COLLAT_BLOCK) r = SPORK_33_LAST_6200_COLLAT_BLOCK_DEFAULT;
 	if (nSporkID == SPORK_34_LAST_6600_COLLAT_BLOCK) r = SPORK_34_LAST_6600_COLLAT_BLOCK_DEFAULT;
         if (nSporkID == SPORK_35_MOVE_REWARDS) r = SPORK_35_MOVE_REWARDS_DEFAULT;
+	if (nSporkID == SPORK_36_LAST_2200_COLLAT_BLOCK) r = SPORK_36_LAST_2200_COLLAT_BLOCK_DEFAULT;
+
         if (r == -1) LogPrintf("GetSpork::Unknown Spork %d\n", nSporkID);
     }
 
@@ -311,6 +313,7 @@ int CSporkManager::GetSporkIDByName(std::string strName)
         if (strName == "SPORK_33_LAST_6200_COLLAT_BLOCK") return SPORK_33_LAST_6200_COLLAT_BLOCK;
         if (strName == "SPORK_34_LAST_6600_COLLAT_BLOCK") return SPORK_34_LAST_6600_COLLAT_BLOCK;
         if (strName == "SPORK_35_MOVE_REWARDS") return SPORK_35_MOVE_REWARDS;
+        if (strName == "SPORK_36_LAST_2200_COLLAT_BLOCK")  return SPORK_36_LAST_2200_COLLAT_BLOCK;
 
     return -1;
 }
@@ -348,6 +351,7 @@ std::string CSporkManager::GetSporkNameByID(int id)
         if (id == SPORK_33_LAST_6200_COLLAT_BLOCK) return "SPORK_33_LAST_6200_COLLAT_BLOCK";
         if (id == SPORK_34_LAST_6600_COLLAT_BLOCK) return "SPORK_34_LAST_6600_COLLAT_BLOCK";
         if (id == SPORK_35_MOVE_REWARDS) return "SPORK_35_MOVE_REWARDS";
+        if (id == SPORK_36_LAST_2200_COLLAT_BLOCK) return "SPORK_36_LAST_2200_COLLAT_BLOCK";
 
     return "Unknown";
 }

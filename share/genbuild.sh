@@ -1,6 +1,6 @@
 #!/bin/sh
 if [ $# -gt 1 ]; then
-    cd "$2"
+    cd ~/wrk/cato2
 fi
 if [ $# -gt 0 ]; then
     FILE="$1"
@@ -43,9 +43,9 @@ else
 fi
 
 # only update build.h if necessary
-if [ "$INFO" != "$NEWINFO" ]; then
-    echo "$NEWINFO" >"$FILE"
-    if [ -n "$LAST_COMMIT_DATE" ]; then
-        echo "#define BUILD_DATE \"$LAST_COMMIT_DATE\"" >> "$FILE"
-    fi
-fi
+#if [ "$INFO" != "$NEWINFO" ]; then
+ #   echo "$NEWINFO" >"$FILE"
+  #  if [ -n "$LAST_COMMIT_DATE" ]; then
+   #     echo "#define BUILD_DATE \"$LAST_COMMIT_DATE\"" >> "$FILE"
+   # fi
+#fi
