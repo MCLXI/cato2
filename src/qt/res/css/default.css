@@ -990,8 +990,25 @@ font-weight:bold;
 font-size:14px;
 min-height:35px;
 }
+QWidget .QFrame#frame .QLabel#labelTotalText2 { /* Total Balance Label */
+qproperty-alignment: 'AlignVCenter | AlignRight';
+min-width:160px;
+background-color:#26ade3;
+color:#fff;
+margin-right:5px;
+padding-right:5px;
+font-weight:bold;
+font-size:14px;
+min-height:35px;
+}
 
 QWidget .QFrame#frame .QLabel#labelTotal { /* Total Balance */
+qproperty-alignment: 'AlignVCenter | AlignLeft';
+font-size:12px;
+margin-left:0px;
+}
+
+QWidget .QFrame#frame .QLabel#labelTotal2 { /* Total Balance */
 qproperty-alignment: 'AlignVCenter | AlignLeft';
 font-size:12px;
 margin-left:0px;
